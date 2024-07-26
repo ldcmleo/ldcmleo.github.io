@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "ShareTech";
+    src: url("../media/fonts/ShareTech-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Ysabeau";
+    src: url("../media/fonts/YsabeauInfant-VariableFont_wght.ttf");
+}
+
+.title-font { font-family: "ShareTech"; }
+.p-font { font-family: "Ysabeau"; }
+
+.box {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.shadows {
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(166,166,166,1);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(166,166,166,1);
+    box-shadow: 2px 4px 5px 0px rgba(166,166,166,1);
+}
