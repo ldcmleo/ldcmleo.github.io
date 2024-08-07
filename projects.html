@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Leonardo Castro - Official Website</title>
+</head>
+<body class="p-font text-stone-950">
+    <header class="fixed w-full bg-white title-font min-h-12 py-2 border-b border-zinc-200">
+        <div class="box flex flex-col lg:flex-row justify-between items-center px-1 lg:px-0">
+            <div class="w-full flex justify-between">
+                <a class="text-lg" href="/"><span class="font-bold text-teal-500">Leonardo</span> Castro</a>
+                <button class="lg:hidden" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg></button>
+            </div>
+            <nav id="navbar" class="hidden lg:flex flex-col lg:flex-row items-center">
+                <a class="px-2 hover:text-teal-500 transition-all ease-in duration-200" href="/">About</a>
+                <a class="px-2 text-teal-500 transition-all ease-in duration-200" href="projects.html">Projects</a>
+                <a class="px-2 hover:text-teal-500 transition-all ease-in duration-200" href="repositories.html">Repositories</a>
+                <a class="px-2 hover:text-teal-500 transition-all ease-in duration-200" href="cv.html">CV</a>
+                <a href='https://ko-fi.com/S6S4D7XK0' target='_blank' class="w-8"><img height='32' width="32" style='border:0px;height:32px;width:32px;' src='https://storage.ko-fi.com/cdn/brandasset/kofi_p_logo_nolabel.png?_gl=1*h34ogi*_gcl_au*MTEzMDIwMjU5NS4xNzIxOTM1MDc4*_ga*MTA5MDQyMjkzNS4xNzIxOTM1MDc4*_ga_M13FZ7VQ2C*MTcyMTkzNTA3OC4xLjEuMTcyMTkzNjAyOS41OC4wLjA.' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+            </nav>
+        </div>
+    </header>
+    <main class="pb-20">
+        <section class="box border-b border-zinc-200">
+            <header class="pt-20 pb-28">
+                <h1 class="title-font text-4xl">My projects</h1>
+                <h2>A list of my personal and professional projects</h2>
+            </header>
+        </section>
+        <section class="box border-b border-zinc-200 text-lg">
+            <h1 class="text-4xl title-font pt-8 pb-2">MixiPHP (Now Deprecated)</h1>
+            <p class="pb-2">One of my first open-source projects (MIT license), MixiPHP, is a web development framework with an MVC architecture inspired by Laravel. The idea behind this framework was to learn how to develop an MVC architecture framework. Other important concepts I learned while developing it include HTTP methods, defining endpoint routes for REST API-based development, and developing a basic ORM for handling persistent data in the database.</p>
+            <p class="pb-20">Of course, the development and maintenance of this project can be continued by anyone interested. More technical details about this project can be found in the official GitHub repository.</p>
+            <p class="text-right pb-2">
+                <a class="hover:text-teal-500 transition-all ease-in duration-200" href="https://github.com/ldcmleo/mixiphp-DEPRECATED">See Github Repository</a>
+            </p>
+        </section>
+        <section class="box border-b border-zinc-200 text-lg">
+            <h1 class="text-4xl title-font pt-8 pb-2">KočkaPHP</h1>
+            <div class="grid grid-cols-1 md:grid-cols-4">
+                <div class="col-span-1">
+                    <img class="mx-auto md:mx-0" src="../assets/media/images/mixilogo2.png" alt="KockaPHP framework logo">
+                </div>
+                <div class="col-span-1 md:col-span-3 md:pl-8">
+                    <p class="pb-2">KockaPHP is a personal project inspired by <a class="font-bold" href="https://expressjs.com/">Express JS</a> and, in a way, a continuation of the MixiPHP project. Moving away from the concept of creating a framework for learning and developing under a more modern standard (JavaScript style), the KockaPHP framework was born with the idea of developing REST APIs in an agile and scalable manner using PHP. Although it is still in a very early development stage, I am including this project here because I plan to maintain it for at least a couple of years, depending on the community's response.</p>
+                    <p class="pb-2">This is a project heavily influenced by <a class="font-bold" href="https://expressjs.com/">Express JS</a> and aims to be used to create APIs and to be used with technologies like <a class="font-bold" href="https://tailwindcss.com/">TailwindCSS</a> and <a class="font-bold" href="https://htmx.org/">HTMX</a>.</p>
+                    <p>As the development of this project continues, I will post information about its progress on my social media channels.</p>
+                    <p class="text-right pb-2">
+                        <a class="hover:text-teal-500 transition-all ease-in duration-200" href="https://github.com/ldcmleo/kockaphp">See Github Repository</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="box text-lg">
+            <h1 class="text-4xl title-font pt-8 pb-2">Cozy Game</h1>
+            <div class="grid grid-cols-1 md:grid-cols-4">
+                <div class="col-span-1">
+                    <img class="mx-auto md:mx-0" src="https://img.itch.zone/aW1hZ2UvMjgwMDY5MC8xNjg2MDg2OC5wbmc=/original/FVdF2a.png" alt="Sprites of my cozy game by Ellenora">
+                    <span class="block text-right text-xs">Sprites By <a class="font-bold" href="https://ellen0ra.itch.io/">Ellenora</a></span>
+                </div>
+                <div class="col-span-1 md:col-span-3 md:pl-8">
+                    <p class="pb-2">As a video game enthusiast, one of my favorite hobbies is game development. This project is a cozy RPG inspired by games like Stardew Valley and Animal Crossing. It is developed entirely in the Godot game engine and is intended as a collaborative project with Ellenora. This simple project serves as both practice for me and a step towards fulfilling one of my dreams: to officially publish a game. Through this project, I aim to refine my skills in game development, work on collaborative creativity, and bring an enjoyable gaming experience to others.</p>
+                    <p class="pb-2">This project is being developed with open-source tools and released in parts and in collaboration, so its source code is reserved. However, the game assets can be found on my official page on Itch.io</p>
+                    <p class="text-right pb-2">
+                        <a class="hover:text-teal-500 transition-all ease-in duration-200" href="https://ellen0ra.itch.io/">Ellenora's Itch.io Profile</a>
+                        <span>*</span>
+                        <a class="hover:text-teal-500 transition-all ease-in duration-200" href="https://ldcmleo.itch.io/">My Itch.io Profile</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="title-font min-h-12 py-2 border-t border-zinc-200">
+        <p class="text-center align-middle">Official Leonardo Castro <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github inline" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+          </svg> <a href="https://github.com/ldcmleo/ldcmleo.github.io">Github Page</a></p>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

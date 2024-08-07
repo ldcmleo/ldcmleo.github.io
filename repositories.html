@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Leonardo Castro - Official Website</title>
+</head>
+<body class="p-font text-stone-950">
+    <header class="fixed w-full bg-white title-font min-h-12 py-2 border-b border-zinc-200">
+        <div class="box flex flex-col lg:flex-row justify-between items-center px-1 lg:px-0">
+            <div class="w-full flex justify-between">
+                <a class="text-lg" href="/"><span class="font-bold text-teal-500">Leonardo</span> Castro</a>
+                <button class="lg:hidden" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg></button>
+            </div>
+            <nav id="navbar" class="hidden lg:flex flex-col lg:flex-row items-center">
+                <a class="px-2 hover:text-teal-500 transition-all ease-in duration-200" href="/">About</a>
+                <a class="px-2 hover:text-teal-500 transition-all ease-in duration-200" href="projects.html">Projects</a>
+                <a class="px-2 text-teal-500 transition-all ease-in duration-200" href="repositories.html">Repositories</a>
+                <a class="px-2 hover:text-teal-500 transition-all ease-in duration-200" href="cv.html">CV</a>
+                <a href='https://ko-fi.com/S6S4D7XK0' target='_blank' class="w-8"><img height='32' width="32" style='border:0px;height:32px;width:32px;' src='https://storage.ko-fi.com/cdn/brandasset/kofi_p_logo_nolabel.png?_gl=1*h34ogi*_gcl_au*MTEzMDIwMjU5NS4xNzIxOTM1MDc4*_ga*MTA5MDQyMjkzNS4xNzIxOTM1MDc4*_ga_M13FZ7VQ2C*MTcyMTkzNTA3OC4xLjEuMTcyMTkzNjAyOS41OC4wLjA.' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+            </nav>
+        </div>
+    </header>
+    <main class="pb-20">
+        <section class="box">
+            <header class="pt-20 pb-8">
+                <h1 class="title-font text-4xl">Github Repositories</h1>
+                <h2>My personal and public information from my github account</h2>
+                <div class="flex flex-col md:flex-row justify-start items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <img class="block md:inline pt-4" src="https://github-readme-stats.vercel.app/api/?username=ldcmleo&theme=default&show_icons=true" alt="">
+                    <img class="block md:inline" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ldcmleo&layout=compact" alt="">
+                </div>
+            </header>
+        </section>
+        <section class="box pb-16">
+            <h1 class="title-font text-3xl">Github Repositories</h1>
+            <div id="repos" class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8"></div>
+        </section>
+        <section class="box pb-16">
+            <h1 class="title-font text-3xl">Github Statistics</h1>
+            <img class="pt-8" src="https://github-profile-trophy.vercel.app/?username=ldcmleo&theme=flat&locale=en&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6" alt="">
+        </section>
+    </main>
+    <footer class="title-font min-h-12 py-2 border-t border-zinc-200">
+        <p class="text-center align-middle">Official Leonardo Castro <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github inline" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+          </svg> <a href="https://github.com/ldcmleo/ldcmleo.github.io">Github Page</a></p>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script type="module">
+        fetch('https://api.github.com/users/ldcmleo/repos', { 
+                 headers: {
+                      'Accept' : 'application/vnd.github.v3+json'
+                  }})
+		.then(response => response.json()) //Converting the response to a JSON object
+		.then( data => {
+                data.forEach(element => {
+                    console.log(element["name"]);
+                    repos.innerHTML += `<a href="`+element["html_url"]+`"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ldcmleo&repo=`+element["name"]+`"></a>`;
+                });
+            })
+		.catch( error => console.error(error));
+    </script>
+</body>
+</html>
