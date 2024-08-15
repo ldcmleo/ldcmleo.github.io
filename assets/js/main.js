@@ -1,10 +1,16 @@
-var is_menu_open = false;
+/// basic interactive here
+const minimum_scroll = 20
 
-function toggleMenu() {
-    if (is_menu_open) {
-        navbar.style.display = "none";
+document.addEventListener("scroll", (event) => {
+    if (window.scrollY > minimum_scroll) {
+        header_profile.classList.remove("header-object")
+        header_name.classList.remove("header-object")
+        header_up.classList.remove("header-object-2")
+        header_github.classList.remove("header-object-2")
     } else {
-        navbar.style.display = "flex";
+        header_profile.classList.add("header-object")
+        header_name.classList.add("header-object")
+        header_up.classList.add("header-object-2")
+        header_github.classList.add("header-object-2")
     }
-    is_menu_open = !is_menu_open;
-}
+})

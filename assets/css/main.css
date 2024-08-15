@@ -8,22 +8,18 @@
     src: url("../media/fonts/YsabeauInfant-VariableFont_wght.ttf");
 }
 
-.title-font { font-family: "ShareTech"; }
-.p-font { font-family: "Ysabeau"; }
+.sharetech { font-family: "ShareTech"; }
+.ysabeau { font-family: "Ysabeau"; }
 
 .box {
     max-width: 960px;
     margin: 0 auto;
 }
 
-.shadows {
-    -webkit-box-shadow: 2px 4px 5px 0px rgba(166,166,166,1);
-    -moz-box-shadow: 2px 4px 5px 0px rgba(166,166,166,1);
-    box-shadow: 2px 4px 5px 0px rgba(166,166,166,1);
+.header-object {
+    transform: translateY(-50px);
 }
 
-.shadows-2 {
-    -webkit-box-shadow: 0px 2px 3px 1px rgb(94, 94, 94);
-    -moz-box-shadow: 0px 2px 3px 1px rgb(94, 94, 94);
-    box-shadow: 0px 2px 3px 1px rgb(94, 94, 94);
+.header-object-2 {
+    transform: translateX(150%);
 }
