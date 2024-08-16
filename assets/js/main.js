@@ -7,10 +7,14 @@ document.addEventListener("scroll", (event) => {
         header_name.classList.remove("header-object")
         header_up.classList.remove("header-object-2")
         header_github.classList.remove("header-object-2")
+        header_linkedin.classList.remove("header-object-2")
+        header.classList.add("bg-zinc-800")
     } else {
         header_profile.classList.add("header-object")
         header_name.classList.add("header-object")
         header_up.classList.add("header-object-2")
         header_github.classList.add("header-object-2")
+        header_linkedin.classList.add("header-object-2")
+        header.classList.remove("bg-zinc-800")
     }
 })
