@@ -52,5 +52,5 @@
 }
 
 .btn:hover span {
-    display: inline;
+    display: inline-block;
 }

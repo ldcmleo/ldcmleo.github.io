@@ -78,7 +78,7 @@ async function fetchAndDisplayRepos() {
                 <h1 class="sharetech capitalize">${element["name"]}</h1>
                 <h2 class="sharetech text-sm pb-8">${element["description"]}</h2>
                 <div class="flex justify-between">
-                    <div class="space-x-2">
+                    <div class="space-x-2" style="font-size: 26px">
                         ${languages}
                     </div>
                     <div class="flex items-center space-x-2">
