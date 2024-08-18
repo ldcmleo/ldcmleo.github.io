@@ -11,8 +11,6 @@ var icon_to_class = {
     "html": "nf nf-dev-html5 text-orange-600",
     "shell": "nf nf-md-bash"
 };
-var counter = 1;
-var total_repos_displayed = 1;
 
 
 async function getRepositoryLanguages(username, repositoryName) {
@@ -54,11 +52,16 @@ async function fetchAndDisplayRepos() {
         });
         
         const data = await response.json();
-        var total_repos = data["length"] - exclude_repositories.length;
-        var last_repos = total_repos % 3 > 0 ? total_repos % 3 : 3;
-        var ttl_last_repos = total_repos - last_repos;
-        console.log(ttl_last_repos);
-                
+
+        if (data["messege"] !== undefined) {
+            const content = `
+                <a class="col-span-9 md:col-span-3 p-8 granulado rounded-md shadow-md hover:bg-sky-200" href="https://github.com/ldcmleo" target="_blank">
+                    <p>Ups! This contenct can't be displayed... See it on Github.com</p>
+                </a>
+            `;
+            repos_container.innerHTML += content;
+            return
+        }
 
         // Iterar sobre cada repositorio
         for (const element of data) {
@@ -73,9 +76,9 @@ async function fetchAndDisplayRepos() {
 
             // Generar contenido
             const content = `
-            <a class="relative col-span-9 md:col-span-3 p-4 ${total_repos_displayed <= total_repos - 1 ? "border-b-2" : "border-b-0"} border-zinc-400 ${total_repos_displayed <= ttl_last_repos ? "md:border-b-2" : "md:border-b-0"} hover:bg-zinc-950 ${counter < 3 ? "md:border-r-2": ""}" href="${element["html_url"]}" target="_blank">
+            <a class="relative col-span-9 md:col-span-3 p-8 granulado rounded-md shadow-md hover:bg-sky-200" href="${element["html_url"]}" target="_blank">
                 <span class="absolute top-2 right-2 nf nf-oct-arrow_up_right"></span>
-                <h1 class="sharetech capitalize">${element["name"]}</h1>
+                <h1 class="sharetech capitalize text-xl text-sky-700">${element["name"]}</h1>
                 <h2 class="sharetech text-sm pb-8">${element["description"]}</h2>
                 <div class="flex justify-between">
                     <div class="space-x-2" style="font-size: 26px">
@@ -88,12 +91,6 @@ async function fetchAndDisplayRepos() {
                 </div>
             </a>
             `;
-            if (counter < 3) {
-                counter++;
-            } else {
-                counter = 1;
-            }
-            total_repos_displayed++;
             // console.log(content);
             repos_container.innerHTML += content;
         }
