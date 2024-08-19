@@ -17,12 +17,16 @@
     margin: 0 auto;
 }
 
-.header-object {
+.header-name {
     transform: translateY(-50px);
 }
 
-.header-object-2 {
-    transform: translateX(150%);
+.header-socials {
+    transform: translateX(50%);
+}
+
+.header-up {
+    transform: translateX(75%);
 }
 
 .granulado {
@@ -33,11 +37,11 @@
 .granulado:before {
     content: "";
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E"),  radial-gradient(circle, #c8cecf, #dee9eb, #e8f0f1, #d9eff2, #d6f2f6);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 182px;
     background-blend-mode: multiply;
-    opacity: 0.35;
+    opacity: 0.15;
     top: 0;
     left: 0;
     position: absolute;
@@ -48,7 +52,6 @@
 
 @media (max-width: 720px) {
     .granulado:before {
-        opacity: 0.55;
         background-size: 350px;
     }
 }

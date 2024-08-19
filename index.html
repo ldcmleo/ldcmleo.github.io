@@ -7,44 +7,47 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Leonardo Castro - Official Website</title>
 </head>
-<body class="text-black ysabeau bg-fixed" style=" background-image: linear-gradient(to left bottom, #fbfbfb, #f4f4f4, #ececec, #e5e5e5, #dedede);">
-    <header class="fixed top-0 left-0 w-full sharetech z-10">
-        <div id="header" class="box flex justify-between py-2 items-center bg-opacity-75 backdrop-blur-md overflow-hidden">
-            <div class="flex items-center space-x-1 pl-1">
-                <img id="header_profile" class="transition-all duration-150 header-object" src="assets/media/images/crow.webp" width="26" height="26" alt="Header profile image">
-                <h1 id="header_name" class="text-lg transition-all duration-150 header-object"><span class="text-sky-600 font-bold">Leonardo</span> Castro</h1>
+<body class="ysabeau text-black bg-zinc-100 dark:text-white dark:bg-zinc-900">
+    <header id="header" class="fixed top-0 left-0 w-full sharetech z-10 bg-opacity-75 dark:bg-opacity-85 backdrop-blur-md">
+        <div class="box flex justify-between py-2 items-center overflow-hidden">
+            <div id="header_name" class="flex items-center space-x-1 pl-1 header-name transition-all duration-150">
+                <img src="assets/media/images/crow.webp" width="26" height="26" alt="Header profile image">
+                <h1 class="text-lg"><span class="text-teal-600 font-bold">Leonardo</span> Castro</h1>
             </div>
             <div class="flex items-center space-x-2">
-                <a id="header_linkedin" class="text-sky-600 hover:text-zinc-900 transition-all duration-150 header-object-2" href="https://www.linkedin.com/in/leonardo-daniel-castro-morales-73715a23a/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
-                <a id="header_github" class="text-sky-600 hover:text-zinc-900 transition-all duration-150 header-object-2" href="https://github.com/ldcmleo"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
-                <button id="header_up" class="hover:text-sky-700 transition-all duration-150 header-object-2"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg></button>
+                <div id="header_socials" class="flex space-x-2 items-center header-socials transition-all duration-150">
+                    <a class="text-teal-600 hover:text-zinc-900 dark:hover:text-white" href="mailto:ldcmleo@proton.me"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg></a>
+                    <a class="text-teal-600 hover:text-zinc-900 dark:hover:text-white" href="https://www.linkedin.com/in/leonardo-daniel-castro-morales-73715a23a/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
+                    <a class="text-teal-600 hover:text-zinc-900 dark:hover:text-white" href="https://github.com/ldcmleo"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+                </div>
+                <button id="header_up" class="hover:text-teal-700 header-up transition-all duration-150"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg></button>
             </div>
         </div>
     </header>
     <main class="box" style="margin-top: 3.5rem;">
         <!-- <div class="fixed top-0 left-0 w-full h-screen opacity-25 -z-10 bg-center bg-cover" style="background-image: url(assets/media/images/bg-images-5.jpg);"></div> -->
         <div class="grid grid-cols-8 gap-4 mx-2 lg:mx-0">
-            <div class="col-span-8 md:col-span-3 lg:col-span-2 granulado rounded-md shadow-md">
-                <img class="w-1/2 mx-auto my-8 rounded-full md:w-full md:m-0 md:rounded-none" src="assets/media/images/profile.jpg" alt="Image profile">
-            </div>
-            <div class="col-span-8 md:col-span-5 lg:col-span-6 p-8 granulado rounded-md shadow-md">
-                <h1 class="sharetech text-2xl font-bold text-center text-sky-700 md:text-left md:text-2xl">Leonardo Castro</h1>
-                <div class="sharetech flex justify-center items-center text-sky-950 uppercase space-x-2 md:justify-start text-xs pb-2">
+            <div class="order-2 md:order-1 col-span-8 md:col-span-5 lg:col-span-6 p-8 granulado rounded-md shadow-md">
+                <h1 class="sharetech text-2xl font-bold text-center text-teal-700 md:text-left md:text-2xl">Leonardo Castro</h1>
+                <div class="sharetech flex justify-center items-center text-teal-950 dark:text-zinc-400 uppercase space-x-2 md:justify-start text-xs pb-2">
                     <h2>Web Developer</h2>
                     <h2>Freelancer</h2>
                     <h2>Cat Lover</h2>
                 </div>
                 <p class="md:w-11/12">Experienced Web Developer with +2 years of expertise in designing and implementing responsive web applications, specializing in backend development. Driven by a strong sense of curiosity, innovation, and a commitment to leveraging my skills to solve complex problems and deliver high-quality solutions.</p>
             </div>
-            <div class="col-span-8 pt-32 pb-16 overflow-hidden granulado rounded-md shadow-md">
+            <div class="order-1 md:order-2 col-span-8 md:col-span-3 lg:col-span-2 granulado rounded-md shadow-md">
+                <img class="w-1/2 mx-auto my-8 rounded-full md:w-full md:m-0 md:rounded-none" src="assets/media/images/profile.jpg" alt="Image profile">
+            </div>
+            <div class="order-3 col-span-8 pt-32 pb-16 overflow-hidden granulado rounded-md shadow-md">
                 <div class="px-4 flex space-x-3 items-center justify-center">
-                    <span class="text-sky-700"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/></svg></span>
-                    <h1 class="sharetech font-bold text-4xl text-sky-700">Experience</h1>
+                    <span class="text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/></svg></span>
+                    <h1 class="sharetech font-bold text-4xl text-teal-700">Experience</h1>
                 </div>
             </div>
-            <div class="col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
-                <h1 class="sharetech text-2xl text-sky-700">Junior Full-Stack Developer</h1>
-                <h2 class="text-sm text-zinc-900 font-bold">Zero Day Software Company</h2>
+            <div class="order-4 col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
+                <h1 class="sharetech text-2xl text-teal-700">Junior Full-Stack Developer</h1>
+                <h2 class="text-sm text-zinc-900 dark:text-white font-bold">Zero Day Software Company</h2>
                 <ul class="list-disc pt-4 pl-4">
                     <li>Developed user interfaces for the core service using HTML, JavaScript, and the W3.CSS framework, ensuring a responsive and intuitive user experience.</li>
                     <li>Maintained and optimized backend API endpoints for the core service, leveraging PHP to enhance performance and reliability.</li>
@@ -52,9 +55,9 @@
                     <li>Managed and organized codebase using Git for version control, adhering to industry-standard best practices and open-source community guidelines.</li>
                 </ul>
             </div>
-            <div class="col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
-                <h1 class="sharetech text-2xl text-sky-700">Full-Stack Developer</h1>
-                <h2 class="text-sm text-zinc-900 font-bold">In <a class="btn text-sky-500 md:text-zinc-900 hover:text-sky-500 transition-all duration-150 ease-in" href="https://www.alcomar.com.mx/">alcomar.com.mx<span class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short inline" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></span></a></h2>
+            <div class="order-5 col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
+                <h1 class="sharetech text-2xl text-teal-700">Full-Stack Developer</h1>
+                <h2 class="text-sm text-zinc-900 dark:text-white font-bold">In <a class="btn text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://www.alcomar.com.mx/">alcomar.com.mx<span class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short inline" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></span></a></h2>
                 <ul class="list-disc pt-4 pl-4">
                     <li>Designed a standardized website structure incorporating essential sections such as Contact, About Us, and Products, utilizing the TailwindCSS library for modern and responsive design.</li>
                     <li>Developed a robust backend to support the website using the Laravel Framework in PHP, ensuring efficient data handling and seamless integration.</li>
@@ -62,21 +65,30 @@
                     <li>Developed backend endpoints for website administration, enabling efficient content management and operational control.</li>
                 </ul>
             </div>
-            <div class="col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
-                <h1 class="sharetech text-2xl text-sky-700">Web Designer</h1>
-                <h2 class="text-sm text-zinc-900 font-bold">In <a class="btn text-sky-500 md:text-zinc-900 hover:text-sky-500 transition-all duration-150 ease-in" href="https://alidec.com.mx/">alidec.com.mx<span class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short inline" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></span></a></h2>
+            <div class="order-6 col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
+                <h1 class="sharetech text-2xl text-teal-700">Web Designer</h1>
+                <h2 class="text-sm text-zinc-900 dark:text-white font-bold">In <a class="btn text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://alidec.com.mx/">alidec.com.mx<span class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short inline" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></span></a></h2>
                 <ul class="list-disc pt-4 pl-4">
                     <li>Designed a comprehensive website structure that includes key sections such as Contact, About Us, Services, and Gallery, ensuring a logical and user-friendly navigation experience.</li>
                     <li>Developed and implemented an intuitive interface design for the main page using HTML, CSS, and JavaScript, focusing on responsiveness and visual appeal.</li>
                     <li>Optimized the website layout to enhance user engagement and accessibility across different devices and screen sizes.</li>
                 </ul>
             </div>
-            <div class="col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md"></div>
+            <div class="order-7 col-span-8 md:col-span-4 p-8 granulado rounded-md shadow-md">
+                <h1 class="sharetech text-2xl text-teal-700">Do you have a project in mind?</h1>
+                <h2 class="text-sm text-zinc-900 dark:text-white font-bold">I also work as a freelancer</h2>
+                <p class="pt-4">Contact me via:</p>
+                <div class="space-y-2">
+                    <p class="text-xl"><a class="text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://github.com/ldcmleo"><i class="nf nf-fa-github"></i> Github</a></p>
+                    <p class="text-xl"><a class="text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://github.com/ldcmleo"><i class="nf nf-md-linkedin"></i> Linkedin</a></p>
+                    <p class="text-xl"><a class="text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://github.com/ldcmleo"><i class="nf nf-md-email"></i> Email</a></p>
+                </div>
+            </div>
 
-            <div class="col-span-8 pt-32 pb-16 overflow-hidden granulado rounded-md shadow-md">
+            <div class="order-8 col-span-8 pt-32 pb-16 overflow-hidden granulado rounded-md shadow-md">
                 <div class="px-4 flex space-x-3 items-center justify-center">
-                    <span class="text-sky-700"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z"/></svg></span>
-                    <h1 class="sharetech font-bold text-4xl text-sky-700">Repositories</h1>
+                    <span class="text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z"/></svg></span>
+                    <h1 class="sharetech font-bold text-4xl text-teal-700">Repositories</h1>
                 </div>
             </div>
         </div>
@@ -84,192 +96,215 @@
         <div class="grid grid-cols-8 gap-4 ml-2 mr-2 mt-4 mb-4 lg:ml-0 lg:mr-0">
             <div class="col-span-8 pt-32 pb-16 overflow-hidden granulado rounded-md shadow-md">
                 <div class="px-4 flex space-x-3 items-center justify-center">
-                    <span class="text-sky-700"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/></svg></span>
-                    <h1 class="sharetech font-bold text-4xl text-sky-700">Skills and Tools</h1>
+                    <span class="text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/></svg></span>
+                    <h1 class="sharetech font-bold text-4xl text-teal-700">Skills and Tools</h1>
                 </div>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=arch" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=windows" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=debian" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=bash" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=powershell" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=php" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=go" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=js" />
                 </a>
             </div>
-             <div class="col-span-1 granulado rounded-md shadow-md">
+             <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=html" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=css" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=ruby" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=python" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=lua" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=mysql" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=postgres" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=sqlite" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=redis" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=git" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=github" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=docker" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=tailwindcss" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=nodejs" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=npm" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=htmx" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=laravel" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=jquery" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=react" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=rails" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=vscode" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=neovim" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=discord" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=godot" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=obsidian" />
                 </a>
             </div>
-            <div class="col-span-1 granulado rounded-md shadow-md">
+            <div class="col-span-2 md:col-span-1 granulado rounded-md shadow-md">
                 <a class="w-full" href="https://skillicons.dev" target="_blank">
                     <img class="w-full p-2 md:p-3 lg:p-4 hover:scale-110 transition-all ease-in duration-150" src="https://skillicons.dev/icons?i=markdown" />
                 </a>
             </div>
         </div>
-        <div class="grid grid-cols-8 mx-2 border-2 border-t-0  lg:mx-0 granulado">
-            <div class="col-span-8 pt-16 pb-8 overflow-hidden max-h-32 border-b-2 ">
-                <div class="px-4 flex space-x-3 items-center">
-                    <span class="text-sky-600"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/></svg></span>
-                    <h1 class="sharetech text-2xl text-sky-600"></h1>
+        <div class="grid grid-cols-8 gap-4 mx-2 lg:mx-0">
+            <div class="col-span-8 pt-32 pb-16 mb-4 overflow-hidden granulado rounded-md shadow-md">
+                <div class="px-4 flex space-x-3 items-center justify-center">
+                    <span class="text-teal-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                    </span>
+                    <h1 class="sharetech font-bold text-4xl text-teal-700">More about me</h1>
+                </div>
+            </div>
+            <div class="col-span-8">
+                <div class="grid grid-rows-3 grid-flow-col gap-4">
+                    <div class="col-span-12 granulado rounded-md shadow-md p-8">
+                        <h1 class="text-2xl text-center sharetech"><i class="nf nf-fa-birthday_cake text-yellow-500"></i> Mar. 5</h1>
+                    </div>
+                    <div class="row-span-2 col-span-12 granulado rounded-md shadow-md p-8">
+                        <h1 class="text-center text-xs sharetech">Prefered Language</h1>
+                        <p class="text-center text-6xl sharetech"><i class="nf nf-md-language_go text-sky-600"></i></p>
+                    </div>
+                    <div class="row-span-3 text-center md:text-left granulado rounded-md shadow-md p-8">
+                        <a class="float-none md:float-left md:pr-4" href="https://ellen0ra.itch.io/food-icons">
+                            <img class="w-full md:w-44" src="https://img.itch.zone/aW1nLzE2NzQ5ODYzLnBuZw==/315x250%23c/VueAIQ.png" alt="Ellenora's food icons image reference">
+                        </a>
+                        <h1 class="text-2xl sharetech text-teal-700">Cozy RPG Game feat. <a href="https://ellen0ra.itch.io/">@Ellen0ra</a></h1>
+                        <p class="text-left">As a video game enthusiast, one of my favorite hobbies is game development. This project is a cozy RPG inspired by games like Stardew Valley and Animal Crossing. It is developed entirely in the Godot game engine and is intended as a collaborative project with Ellenora. This simple project serves as both practice for me and a step towards fulfilling one of my dreams: to officially publish a game. Through this project, I aim to refine my skills in game development, work on collaborative creativity, and bring an enjoyable gaming experience to others.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <footer class="py-8">
-        <p class="sharetech text-center">Leonardo Castro @ <a class="btn text-sky-500 md:text-zinc-400 hover:text-sky-500 transition-all duration-150 ease-in" href="https://github.com/ldcmleo/ldcmleo.github.io">Github Page<span class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short inline" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></span></a>
+        <p class="sharetech text-center">Leonardo Castro @ <a class="btn text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://github.com/ldcmleo/ldcmleo.github.io">Github Page<span class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short inline" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></span></a>
     </footer>
     <script type="module">
         import {Tween, Easing} from 'https://unpkg.com/@tweenjs/tween.js@23.1.3/dist/tween.esm.js'
