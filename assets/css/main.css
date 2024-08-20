@@ -70,6 +70,15 @@
     z-index: -1;
 }
 
+.lang-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    transition: all 0.5s ease-in;
+    z-index: -1;
+}
+
 .lang-100 {
     width: 100%;
 }
@@ -83,11 +92,8 @@
 }
 
 @media (min-width: 1024px) {
-    .lang-percent {
-        transform: translateX(-100%);
-    }
+    .lang-percent { transform: translateX(-100%); }
+    .lang-label { transform: translateY(300%); }
 
-    .language:hover .lang-percent {
-        transform: none;
-    }
+    .language:hover .lang-percent, .language:hover .lang-label { transform: none; }
 }
