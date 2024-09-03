@@ -76,10 +76,10 @@ async function fetchAndDisplayRepos() {
 
             // Generar contenido
             const content = `
-            <a class="relative col-span-9 md:col-span-3 p-8 granulado rounded-md shadow-md hover:bg-sky-200 dark:hover:bg-zinc-950" href="${element["html_url"]}" target="_blank">
+            <a class="relative flex flex-col col-span-9 md:col-span-3 p-8 granulado rounded-md shadow-md hover:bg-sky-200 dark:hover:bg-zinc-950" href="${element["html_url"]}" target="_blank">
                 <span class="absolute top-2 right-2 nf nf-oct-arrow_up_right"></span>
                 <h1 class="sharetech capitalize text-xl text-teal-700">${element["name"]}</h1>
-                <h2 class="sharetech text-sm pb-8">${element["description"]}</h2>
+                <h2 class="sharetech text-sm pb-8 flex-grow">${element["description"]}</h2>
                 <div class="flex justify-between">
                     <div class="space-x-2" style="font-size: 26px">
                         ${languages}
