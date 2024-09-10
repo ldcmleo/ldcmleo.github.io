@@ -4,12 +4,14 @@ var icon_to_class = {
     "php": "nf nf-md-language_php text-indigo-700",
     "dockerfile": "nf nf-fa-docker text-sky-600",
     "javascript": "nf nf-dev-javascript_badge text-yellow-500",
+    "typescript": "nf nf-md-language_typescript text-sky-600",
     "go": "nf nf-md-language_go text-sky-400",
     "gdscript": "nf nf-seti-godot text-sky-400",
     "ruby": "nf nf-dev-ruby text-red-500",
     "css": "nf nf-dev-css3 text-sky-400",
     "html": "nf nf-dev-html5 text-orange-600",
-    "shell": "nf nf-md-bash"
+    "shell": "nf nf-md-bash",
+    "makefile": "nf nf-seti-makefile text-green-600"
 };
 
 
