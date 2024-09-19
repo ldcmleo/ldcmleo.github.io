@@ -13,7 +13,7 @@ import NavbarLink from './NavbarLink.astro';
             <NavbarLink link="mailto:ldcmleo@proton.me" icon="nf nf-md-email" text="email" />
             <NavbarLink link="https://www.linkedin.com/in/leonardo-daniel-castro-morales-73715a23a" icon="nf nf-md-linkedin" text="linkedin" />
             <NavbarLink link="https://www.github.com/ldcmleo" icon="nf nf-md-github" text="github" />
-            <button class="text-xl"><b class="nf nf-md-arrow_up_box"></b></button>
+            <button id="navbar_up_btn" class="text-xl"><b class="nf nf-md-arrow_up_box"></b></button>
         </nav>
     </div>
 </header>
@@ -31,12 +31,39 @@ import NavbarLink from './NavbarLink.astro';
     }
 </style>
 <script>
+    import {Tween, Easing} from '@tweenjs/tween.js'
+    const navbarUpBtn = document.getElementById('navbar_up_btn')
+
+    if (navbarUpBtn) {
+        navbarUpBtn.addEventListener("click", () => {
+            var actual_scroll = window.scrollY
+            const coords = {
+                x: 0, 
+                y: actual_scroll
+            }
+            const tween = new Tween(coords)
+                .to({x: 0, y: 0}, 1000)
+                .easing(Easing.Quadratic.InOut)
+                .onUpdate(() => {
+                    window.scrollTo(coords.x, coords.y)
+                })
+                .start()
+    
+            function animate(time: any) {
+                tween.update(time)
+                requestAnimationFrame(animate)
+            }
+            requestAnimationFrame(animate)
+        })
+    }
+</script>
+<script>
     const toggleNavbarOnScroll = () => {
         const navbar = document.querySelector('header')
         const navbarName = document.getElementById('navbar_name')
         const navbarMenu = document.getElementById('navbar_menu')
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 150) {
+            if (window.scrollY > 75) {
                 navbar?.classList.add('bg-zinc-100')
                 navbar?.classList.add('dark:bg-zinc-900')
                 if (navbarName) {

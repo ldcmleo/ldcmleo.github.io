@@ -1,0 +1,80 @@
+---
+interface Task {
+    description: string
+    skills: Array<string>
+}
+const { Data } = Astro.props
+// hover:text-teal-800 focus:text-teal-800 dark:focus:text-white dark:hover:text-white transition-all duration-150 ease-in
+---
+<div class="relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden">
+    <div class="granulado"></div>
+    <div id={Data.id + "_skills"} class="absolute right-8 top-8 text-2xl">
+        {Data.skills.map((skill: string) => (
+            <div class="skill"><i class={skill}></i></div>
+        ))}
+    </div>
+    <h1 class="text-2xl text-teal-700">{Data.role}</h1>
+    <h2 class="text-sm text-zinc-900 dark:text-white font-bold">
+        {Data.at.isLink ?
+            <a class="text-teal-500 md:text-zinc-900 dark:text-white hover:text-teal-500 transition-all duration-150 ease-in" href={Data.at.url}>{Data.at.company}</a>
+        :
+            <span class="text-teal-500 md:text-zinc-900 dark:text-white">{Data.at.company}</span>
+        }
+    </h2>
+    <ul class="pt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400 w-10/12">
+        {Data.tasks.map((task: Task, index: number) => (
+            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="task-item text-left hover:text-black dark:hover:text-white focus:text-teal-700" id={Data.id + "_task_" + index}>{task.description}</button>
+        ))}
+    </ul>
+</div>
+<style>
+    h1 {
+        font-family: 'sharetech';
+    }
+    .skill:hover {
+        opacity: 1;
+        filter: saturate(1);
+    }
+    .skill {
+        opacity: 0.5;
+        filter: saturate(0);
+        transition: all 0.15s ease-in-out;
+    }
+</style>
+<script>
+    const tasks = document.querySelectorAll('button.task-item')
+    
+    tasks.forEach((task) => {
+        const skill_classes = task.getAttribute('skill-classes')
+        const project_id = task.getAttribute('project-id')
+        const a_skill_classes = skill_classes?.split(" ")
+        
+        task.addEventListener('click', () => {
+            const skill_div = document.getElementById(project_id + "_skills") as HTMLElement
+            if (skill_div) {
+                const skill_div_children = Array.from(skill_div.children) as HTMLElement[]
+                skill_div_children.forEach((skill: HTMLElement) => {
+                    const isSkillIcon = skill.querySelector("i") !== null
+                    if (isSkillIcon) {
+                        const skillIcon = skill.querySelector("i")
+                        const is_in_task = a_skill_classes?.some(clase => skillIcon?.classList.contains(clase))
+                        if (is_in_task) {
+                            skill.style.opacity = "1"
+                            skill.style.filter = "saturate(1)"
+                        }
+                    }
+                })
+            }
+        })
+
+        task.addEventListener('blur', () => {
+            const skill_div = document.getElementById(project_id + "_skills") as HTMLElement
+            if (skill_div) {
+                const skill_div_children = Array.from(skill_div.children) as HTMLElement[]
+                skill_div_children.forEach((skill: HTMLElement) => {
+                    skill.removeAttribute("style")
+                })
+            }
+        })
+    })
+</script>
