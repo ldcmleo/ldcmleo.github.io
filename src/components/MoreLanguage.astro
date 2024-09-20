@@ -1,0 +1,79 @@
+---
+const { Language, Level, LevelClass } = Astro.props
+---
+<div class="relative language col-span-3 overflow-hidden rounded-md shadow-md p-8">
+    <div class="granulado"></div>
+    <div class={"lang-percent bg-slate-100 dark:bg-gray-800 " + LevelClass}>
+        <div class="bg-circle-1"></div>
+        <div class="bg-circle-2"></div>
+        <div class="bg-circle-3"></div>
+    </div>
+    <div class="lang-label text-center text-xs text-zinc-600 dark:text-zinc-400 uppercase">{Level}</div>
+    <p class="sharetech text-2xl text-center">{Language}</p>
+</div>
+<style>
+    .lang-percent {
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease-in;
+        z-index: -1;
+    }
+
+    .lang-label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15%;
+        transition: all 0.5s ease-in;
+        z-index: -1;
+    }
+
+    .level-100 {
+        width: 100%;
+    }
+
+    .level-50 {
+        width: 50%;
+    }
+
+    .level-10 {
+        width: 10%;
+    }
+
+    @media (min-width: 1024px) {
+        .lang-percent { transform: translateX(-100%); }
+        .lang-label { transform: translateY(300%); }
+
+        .language:hover .lang-percent, .language:hover .lang-label { transform: none; }
+    }
+
+    .bg-circle-1,
+    .bg-circle-2,
+    .bg-circle-3 {
+        position: absolute;
+        width: 3.15rem;
+        height: 3.15rem;
+        z-index: -1;
+        opacity: 0.8;
+        filter:blur(2.25rem);
+    }
+
+    .bg-circle-1 {
+        top: 0;
+        left: 0;
+        background: #a72222;
+    }
+    .bg-circle-2 {
+        top: 0;
+        right: 0;
+        background: #22a72d;
+    }
+    .bg-circle-3 {
+        bottom: 0;
+        left: 40%;
+        background: #2422a7;
+    }
+</style>

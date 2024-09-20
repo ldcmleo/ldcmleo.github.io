@@ -8,22 +8,22 @@ const { Data } = Astro.props
 ---
 <div class="relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden">
     <div class="granulado"></div>
-    <div id={Data.id + "_skills"} class="absolute right-8 top-8 text-2xl">
+    <div id={Data.id + "_skills"} class="absolute left-8 top-8 text-2xl">
         {Data.skills.map((skill: string) => (
             <div class="skill"><i class={skill}></i></div>
         ))}
     </div>
-    <h1 class="text-2xl text-teal-700">{Data.role}</h1>
-    <h2 class="text-sm text-zinc-900 dark:text-white font-bold">
+    <h1 class="pl-10 text-2xl text-teal-700">{Data.role}</h1>
+    <h2 class="pl-10 text-sm text-zinc-900 dark:text-white font-bold">
         {Data.at.isLink ?
             <a class="text-teal-500 md:text-zinc-900 dark:text-white hover:text-teal-500 transition-all duration-150 ease-in" href={Data.at.url}>{Data.at.company}</a>
         :
             <span class="text-teal-500 md:text-zinc-900 dark:text-white">{Data.at.company}</span>
         }
     </h2>
-    <ul class="pt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400 w-10/12">
+    <ul class="pl-10 pt-4 space-y-2 text-sm">
         {Data.tasks.map((task: Task, index: number) => (
-            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="task-item text-left hover:text-black dark:hover:text-white focus:text-teal-700" id={Data.id + "_task_" + index}>{task.description}</button>
+            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="task-item py-2 px-3 text-left rounded bg-zinc-300 bg-opacity-55 hover:bg-teal-700 hover:text-white focus:bg-teal-700 focus:text-white dark:bg-zinc-800 dark:bg-opacity-55 transition-all ease-linear duration-200" id={Data.id + "_task_" + index}>{task.description}</button>
         ))}
     </ul>
 </div>

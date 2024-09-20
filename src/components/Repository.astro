@@ -1,0 +1,72 @@
+---
+const { Data } = Astro.props
+
+const topicClasses: { [key: string]: string} = {
+    go: "nf-md-language_go text-blue-500",
+    html: "nf-fa-html5 text-orange-500",
+    css: "nf-dev-css3 text-sky-500",
+    javascript: "nf-dev-javascript_badge text-yellow-500",
+    docker: "nf-fa-docker text-blue-500",
+    php: "nf-dev-php text-blue-500",
+    astro: "nf-custom-astro text-purple-700",
+    angular: "nf-fa-angular text-red-500",
+    react: "nf-dev-react text-blue-500",
+    typescript: "nf-md-language_typescript text-blue-500",
+    postgres: "nf-dev-postgresql text-blue-500",
+    mysql: "nf-fae-mysql text-teal-500",
+    nodejs: "nf-fa-node text-green-500",
+    laravel: "nf-dev-laravel text-red-500",
+    ruby: "nf-dev-ruby text-red-500",
+    rust: "nf-dev-rust text-red-700",
+    python: "nf-dev-python text-yellow-500",
+    makefile: "nf-dev-terminal text-green-500",
+    bash: "nf-dev-terminal text-green-500",
+    android: "nf-dev-android text-green-500",
+    shell: "nf-dev-terminal text-green-500"
+}
+
+const license = Data.license
+const topics = Data.topics
+
+const topicClass: string[] = topics
+    .filter((topic: string) => topicClasses[topic])
+    .map((topic: string) => topicClasses[topic])
+---
+<a class="relative overflow-hidden flex flex-col col-span-12 md:col-span-6 lg:col-span-4 p-8 rounded-md shadow-md hover:bg-teal-600 hover:bg-opacity-15 dark:hover:bg-teal-900 dark:hover:bg-opacity-15 transition-colors duration-200 ease-in" href="/" target="_blank">
+    <div class="granulado"></div>
+    <div class="license text-gray-500 dark:text-gray-600">{license?.spdx_id}</div>
+    <span class="absolute top-2 right-2 nf nf-oct-arrow_up_right transition-all ease-linear duration-200"></span>
+    <h1 class="sharetech capitalize text-xl text-teal-700">{Data.name}</h1>
+    <h2 class="sharetech text-sm pb-8 flex-grow">{Data.description}</h2>
+    <div class="flex justify-between">
+        <div class="space-x-2" style="font-size: 26px">
+            {topicClass.map((topic: any) => (
+                <i class={"nf " + topic}></i>
+            ))}
+        </div>
+        <div class="flex items-center space-x-2">
+            <i class="nf nf-cod-repo_forked"> {Data.forks}</i>
+            <i class="nf nf-md-star text-yellow-500"> {Data.stargazers_count}</i>
+        </div>
+    </div>
+</a>
+<style>
+    h1, h2 {
+        font-family: 'sharetech';
+    }
+
+    a:hover span {
+        top: 0.25rem;
+        right: 0.25rem;
+    }
+    .license {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        font-family: 'sharetech';
+        font-size: 5rem;
+        z-index: -1;
+        opacity: 0.1;
+        transform: rotateZ(-90deg);
+    }
+</style>

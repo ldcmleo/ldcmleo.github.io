@@ -1,0 +1,16 @@
+---
+const { IconClass, Text, ColSpan } = Astro.props
+---
+<div class={"relative "+ColSpan+" pt-32 pb-16 overflow-hidden rounded-md shadow-md"}>
+    <div class="granulado"></div>
+    <slot />
+    <div class="px-4 flex items-center justify-center space-x-3 text-teal-700">
+        <b class={"nf " + IconClass + " text-3xl"}></b>
+        <h1 class="font-bold text-4xl">{Text}</h1>
+    </div>
+</div>
+<style>
+    h1 {
+        font-family: 'sharetech';
+    }
+</style>

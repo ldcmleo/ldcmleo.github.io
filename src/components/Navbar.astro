@@ -9,7 +9,7 @@ import NavbarLink from './NavbarLink.astro';
             <span class="text-lg">Leonardo Castro</span>
         </div>
         <nav id="navbar_menu" class="flex items-center space-x-4 transition-all duration-200 ease-in-out">
-            <NavbarLink link="/blog" icon="nf nf-fa-blogger_b" text="blog" />
+            <NavbarLink link="https://medium.com/@ldcmleo" icon="nf nf-fa-blogger_b" text="blog" />
             <NavbarLink link="mailto:ldcmleo@proton.me" icon="nf nf-md-email" text="email" />
             <NavbarLink link="https://www.linkedin.com/in/leonardo-daniel-castro-morales-73715a23a" icon="nf nf-md-linkedin" text="linkedin" />
             <NavbarLink link="https://www.github.com/ldcmleo" icon="nf nf-md-github" text="github" />
@@ -70,7 +70,7 @@ import NavbarLink from './NavbarLink.astro';
                     navbarName.style.transform = "translateY(0)"
                 }
                 if (navbarMenu) {
-                    navbarMenu.style.transform = "translateX(0)"
+                    navbarMenu.style.transform = "translateX(-8px)"
                 }
             } else {
                 navbar?.classList.remove('bg-zinc-100')
@@ -79,7 +79,7 @@ import NavbarLink from './NavbarLink.astro';
                     navbarName.style.transform = "translateY(-200%)"
                 }
                 if (navbarMenu) {
-                    navbarMenu.style.transform = "translateX(32px)"
+                    navbarMenu.style.transform = "translateX(28px)"
                 }
             }
         })

@@ -1,7 +1,9 @@
 ---
 import Project from "./Project.astro";
+import Title from "./Title.astro";
 
-const Project1 = {
+const ProjectsData = [
+    {
     id: "project1",
     role: "Full-Stack Dev Jr",
     at: {
@@ -50,9 +52,8 @@ const Project1 = {
         "nf nf-md-git text-red-500",
         "nf nf-md-api text-green-500"
     ]
-}
-
-const Project2 = {
+    },
+    {
     id: "project2",
     role: "Full-Stack Dev",
     at: {
@@ -84,13 +85,6 @@ const Project2 = {
                 "nf-fae-mysql",
                 "nf-fa-laravel"
             ]
-        },
-        {
-            description: "Developed backend endpoints for website administration, enabling efficient content management and operational control.",
-            skills: [
-                "nf-seti-php",
-                "nf-fa-laravel"
-            ]
         }
     ],
     skills: [
@@ -102,9 +96,8 @@ const Project2 = {
         "nf nf-seti-php text-blue-500",
         "nf nf-fa-js text-yellow-500"
     ]
-}
-
-const Project3 = {
+    },
+    {
     id: "project3",
     role: "Web Design",
     at: {
@@ -146,20 +139,16 @@ const Project3 = {
         "nf nf-md-responsive text-red-500",
         "nf nf-oct-accessibility_inset text-green-500"
     ]
-}
+    }
+]
 ---
 <section class="grid grid-cols-8 gap-4 mx-2 pb-4 lg:mx-0">
-    <div class="relative col-span-8 pt-32 pb-16 overflow-hidden rounded-md shadow-md">
-        <div class="granulado"></div>
+    <Title Text="Experience" IconClass="nf-cod-briefcase" ColSpan="col-span-8">
         <div class="grid-grad"></div>
-        <div class="px-4 flex items-center justify-center space-x-3 text-teal-700">
-            <b class="nf nf-fa-image_portrait text-3xl"></b>
-            <h1 class="font-bold text-4xl">Experience</h1>
-        </div>
-    </div>
-    <Project Data={Project1} />
-    <Project Data={Project2} />
-    <Project Data={Project3} />
+    </Title>
+    { ProjectsData.map((data: any) => (
+        <Project Data={data} />
+    )) }
     <div class="relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden">
         <div class="granulado"></div>
         <h1 class="text-2xl text-teal-700">Do you have a project in mind?</h1>
