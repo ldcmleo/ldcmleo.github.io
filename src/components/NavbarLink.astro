@@ -1,0 +1,13 @@
+---
+const { link, icon, text } = Astro.props;
+
+---
+<a class="relative overflow-hidden text-teal-600 hover:text-zinc-900 dark:hover:text-white transition-colors ease-in duration-150" target="_blank" href={link}><b class={icon}></b><span class="hidden md:inline"> {text}</span></a>
+<style>
+    a {
+        font-size: 20px;
+    }
+    a span {
+        font-size: 16px;
+    }
+</style>

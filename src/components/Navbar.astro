@@ -1,0 +1,89 @@
+---
+import NavbarLink from './NavbarLink.astro';
+
+---
+<header id="navbar" class="fixed top-0 left-0 w-full z-10 bg-opacity-75 dark:bg-opacity-85 backdrop-blur-md">
+    <div class="box flex justify-between items-center py-2 overflow-hidden">
+        <div id="navbar_name" class="flex items-center space-x-1 pl-1 transition-all duration-200 ease-in-out">
+            <img width="32" height="32" src="assets/media/images/crow_icon.png" alt="Leonardo castro website official logo">
+            <span class="text-lg">Leonardo Castro</span>
+        </div>
+        <nav id="navbar_menu" class="flex items-center space-x-4 transition-all duration-200 ease-in-out">
+            <NavbarLink link="https://medium.com/@ldcmleo" icon="nf nf-fa-blogger_b" text="blog" />
+            <NavbarLink link="mailto:ldcmleo@proton.me" icon="nf nf-md-email" text="email" />
+            <NavbarLink link="https://www.linkedin.com/in/leonardo-daniel-castro-morales-73715a23a" icon="nf nf-md-linkedin" text="linkedin" />
+            <NavbarLink link="https://www.github.com/ldcmleo" icon="nf nf-md-github" text="github" />
+            <button id="navbar_up_btn" class="text-xl"><b class="nf nf-md-arrow_up_box"></b></button>
+        </nav>
+    </div>
+</header>
+<style>
+    header {
+        font-family: 'sharetech';
+    }
+
+    #navbar_menu {
+        transform: translateX(32px);
+    }
+
+    #navbar_name {
+        transform: translateY(-200%);
+    }
+</style>
+<script>
+    import {Tween, Easing} from '@tweenjs/tween.js'
+    const navbarUpBtn = document.getElementById('navbar_up_btn')
+
+    if (navbarUpBtn) {
+        navbarUpBtn.addEventListener("click", () => {
+            var actual_scroll = window.scrollY
+            const coords = {
+                x: 0, 
+                y: actual_scroll
+            }
+            const tween = new Tween(coords)
+                .to({x: 0, y: 0}, 1000)
+                .easing(Easing.Quadratic.InOut)
+                .onUpdate(() => {
+                    window.scrollTo(coords.x, coords.y)
+                })
+                .start()
+    
+            function animate(time: any) {
+                tween.update(time)
+                requestAnimationFrame(animate)
+            }
+            requestAnimationFrame(animate)
+        })
+    }
+</script>
+<script>
+    const toggleNavbarOnScroll = () => {
+        const navbar = document.querySelector('header')
+        const navbarName = document.getElementById('navbar_name')
+        const navbarMenu = document.getElementById('navbar_menu')
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 75) {
+                navbar?.classList.add('bg-zinc-100')
+                navbar?.classList.add('dark:bg-zinc-900')
+                if (navbarName) {
+                    navbarName.style.transform = "translateY(0)"
+                }
+                if (navbarMenu) {
+                    navbarMenu.style.transform = "translateX(-8px)"
+                }
+            } else {
+                navbar?.classList.remove('bg-zinc-100')
+                navbar?.classList.remove('dark:bg-zinc-900')
+                if (navbarName) {
+                    navbarName.style.transform = "translateY(-200%)"
+                }
+                if (navbarMenu) {
+                    navbarMenu.style.transform = "translateX(28px)"
+                }
+            }
+        })
+    }
+
+    toggleNavbarOnScroll()
+</script>

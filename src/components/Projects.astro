@@ -1,0 +1,182 @@
+---
+import Project from "./Project.astro";
+import Title from "./Title.astro";
+
+const ProjectsData = [
+    {
+    id: "project1",
+    role: "Full-Stack Dev Jr",
+    at: {
+        company: "Zero Day Software Company",
+        isLink: false,
+        url: ""
+    },
+    tasks: [
+        {
+            description: "Developed user interfaces for the core service using HTML, JavaScript, and the W3.CSS framework, ensuring a responsive and intuitive user experience.",
+            skills: [
+                "nf-fae-w3c",
+                "nf-dev-html5",
+                "nf-fa-js"
+            ]
+        },
+        {
+            description: "Maintained and optimized backend API endpoints for the core service, leveraging PHP to enhance performance and reliability.",
+            skills: [
+                "nf-md-api",
+                "nf-seti-php"
+            ]
+        },
+        {
+            description: "Designed and implemented custom microservices using PHP and Docker, facilitating scalable and efficient service architecture.",
+            skills: [
+                "nf-seti-php",
+                "nf-fa-docker"
+            ]
+        },
+        {
+            description: "Managed and organized codebase using Git for version control, adhering to industry-standard best practices and open-source community guidelines.",
+            skills: [
+                "nf-md-git",
+                "nf-fa-gitlab"
+            ]
+        }
+    ],
+    skills: [
+        "nf nf-fae-w3c text-green-500",
+        "nf nf-dev-html5 text-orange-500",
+        "nf nf-fa-docker text-blue-500",
+        "nf nf-fa-gitlab text-orange-500",
+        "nf nf-fa-js text-yellow-500",
+        "nf nf-seti-php text-blue-500",
+        "nf nf-md-git text-red-500",
+        "nf nf-md-api text-green-500"
+    ]
+    },
+    {
+    id: "project2",
+    role: "Full-Stack Dev",
+    at: {
+        company: "In alcomar.com.mx",
+        isLink: true,
+        url: "https://www.alcomar.com.mx/"
+    },
+    tasks: [
+        {
+            description: "Designed a standardized website structure incorporating essential sections such as Contact, About Us, and Products, utilizing the TailwindCSS library for modern and responsive design.",
+            skills: [
+                "nf-md-tailwind",
+                "nf-dev-css3",
+                "nf-dev-html5",
+                "nf-fa-js"
+            ]
+        },
+        {
+            description: "Developed a robust backend to support the website using the Laravel Framework in PHP, ensuring efficient data handling and seamless integration.",
+            skills: [
+                "nf-fa-laravel",
+                "nf-seti-php"
+            ]
+        },
+        {
+            description: "Created and optimized a MySQL database structure, implementing migrations through Laravel's ORM, to ensure data integrity and scalability.",
+            skills: [
+                "nf-seti-php",
+                "nf-fae-mysql",
+                "nf-fa-laravel"
+            ]
+        }
+    ],
+    skills: [
+        "nf nf-md-tailwind text-blue-500",
+        "nf nf-fa-laravel text-red-500",
+        "nf nf-dev-css3 text-sky-500",
+        "nf nf-fae-mysql text-teal-500",
+        "nf nf-dev-html5 text-orange-500",
+        "nf nf-seti-php text-blue-500",
+        "nf nf-fa-js text-yellow-500"
+    ]
+    },
+    {
+    id: "project3",
+    role: "Web Design",
+    at: {
+        company: "In alidec.com.mx",
+        isLink: true,
+        url: "https://alidec.com.mx/"
+    },
+    tasks: [
+        {
+            description: "Designed a comprehensive website structure that includes key sections such as Contact, About Us, Services, and Gallery, ensuring a logical and user-friendly navigation experience.",
+            skills: [
+                "nf-dev-html5",
+                "nf-oct-accessibility_inset"
+            ]
+        },
+        {
+            description: "Developed and implemented an intuitive interface design for the main page using HTML, CSS, and JavaScript, focusing on responsiveness and visual appeal.",
+            skills: [
+                "nf-md-tailwind",
+                "nf-dev-css3",
+                "nf-dev-html5",
+                "nf-fa-js"
+            ]
+        },
+        {
+            description: "Optimized the website layout to enhance user engagement and accessibility across different devices and screen sizes.",
+            skills: [
+                "nf-dev-css3",
+                "nf-dev-html5",
+                "nf-md-responsive"
+            ]
+        }
+    ],
+    skills: [
+        "nf nf-md-tailwind text-blue-500",
+        "nf nf-dev-html5 text-orange-500",
+        "nf nf-dev-css3 text-sky-500",
+        "nf nf-fa-js text-yellow-500",
+        "nf nf-md-responsive text-red-500",
+        "nf nf-oct-accessibility_inset text-green-500"
+    ]
+    }
+]
+---
+<section class="grid grid-cols-8 gap-4 mx-2 pb-4 lg:mx-0">
+    <Title Text="Experience" IconClass="nf-cod-briefcase" ColSpan="col-span-8">
+        <div class="grid-grad"></div>
+    </Title>
+    { ProjectsData.map((data: any) => (
+        <Project Data={data} />
+    )) }
+    <div class="relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden">
+        <div class="granulado"></div>
+        <h1 class="text-2xl text-teal-700">Do you have a project in mind?</h1>
+        <h2 class="text-sm text-zinc-900 dark:text-white font-bold">I also work as a freelancer</h2>
+        <p class="pt-4">Contact me via:</p>
+        <div class="space-y-2 pt-2">
+            <p class="text-xl"><a class="text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://github.com/ldcmleo"><i class="nf nf-fa-github"></i> Github</a></p>
+            <p class="text-xl"><a class="text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="https://www.linkedin.com/in/leonardo-daniel-castro-morales-73715a23a/"><i class="nf nf-md-linkedin"></i> Linkedin</a></p>
+            <p class="text-xl"><a class="text-teal-500 md:text-zinc-900 dark:md:text-white hover:text-teal-500 transition-all duration-150 ease-in" href="mailto:ldcmleo@proton.me"><i class="nf nf-md-email"></i> Email</a></p>
+        </div>
+    </div>
+</section>
+<style>
+    h1 {
+        font-family: 'sharetech';
+    }
+    .grid-grad {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background-image: linear-gradient(to bottom, #6e6e6e  1px, transparent  1px),
+                            linear-gradient(to right, #6e6e6e 1px, transparent  1px);
+        /* background-position: right -1px; */
+        background-size: 25px 25px;
+        opacity: 0.15;
+        mask-image: radial-gradient(circle at 50% 50%, white, transparent 50%);
+        z-index: -1;
+    }
+</style>
