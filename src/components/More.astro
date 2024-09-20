@@ -2,6 +2,7 @@
 import MoreLanguage from './MoreLanguage.astro';
 import Title from './Title.astro';
 ---
+
 <section class="grid grid-cols-12 gap-4 mx-2 pb-4 lg:mx-0">
     <Title Text="More about me" IconClass="nf-fa-image_portrait" ColSpan="col-span-12" />
     <div class="col-span-12 md:col-span-3 flex space-y-4 flex-col">
@@ -98,16 +99,17 @@ import Title from './Title.astro';
         </div>
     </a>
 </section>
+
 <style>
     .sharetech {
-        font-family: 'sharetech';
+        font-family: "Share Tech", sans-serif;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .nf-oct-arrow_up_right {
         transition: all 0.2s ease-in;
     }
-
-
 
     a:hover .nf-oct-arrow_up_right {
         top: 0.25rem;
