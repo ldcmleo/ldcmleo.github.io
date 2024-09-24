@@ -1,0 +1,86 @@
+---
+// <i id="sun" class="nf nf-md-white_balance_sunny hidden"></i>
+//         <i id="moon" class="nf nf-oct-moon hidden"></i>
+//         <i id="gear" class="nf nf-fa-gear hidden"></i>
+---
+<button id="theme_toggler" class="text-xl">
+    <i data-theme="" id="theme_toggler_icon" class="nf"></i>
+</button>
+<script>
+    const toggle_appearance = document.getElementById("theme_toggler");
+    const icons = {
+        sun: "nf-md-white_balance_sunny",
+        moon: "nf-oct-moon",
+        default: "nf-fa-gear"
+    }
+
+    const getAppeareance = () => {
+        const button_icon = document.getElementById("theme_toggler_icon");
+
+        if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            toggle_appearance?.setAttribute("data-theme", "dark");
+            button_icon?.classList.add(icons.moon);
+            button_icon?.classList.remove(icons.default);
+            button_icon?.classList.remove(icons.sun);
+        } else if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+            toggle_appearance?.setAttribute("data-theme", "light");
+            button_icon?.classList.add(icons.sun);
+            button_icon?.classList.remove(icons.default);
+            button_icon?.classList.remove(icons.moon);
+        } else {
+            if (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            button_icon?.classList.add(icons.default);
+            toggle_appearance?.setAttribute("data-theme", "default");
+            button_icon?.classList.remove(icons.sun);
+            button_icon?.classList.remove(icons.moon);
+        }
+    }
+
+    const getAppeareanceConfig = () => {
+        const button_icon = document.getElementById("theme_toggler_icon");
+
+        console.log(button_icon?.getAttribute("data-theme"));
+        
+
+        if (button_icon?.getAttribute("data-theme") == icons.sun) {
+            return "light";
+        }
+
+        if (button_icon?.getAttribute("data-theme") == icons.moon) {
+            return "dark";
+        }
+
+        if (button_icon?.getAttribute("data-theme") == icons.default) {
+            return "default";
+        }
+        
+        return "default";
+    }
+
+    window.addEventListener('load', () => {
+        getAppeareance();
+    })
+
+    toggle_appearance?.addEventListener('click', (event: Event) => {
+        const target = event?.currentTarget as HTMLButtonElement;
+        const config = target.getAttribute("data-theme");
+
+        console.log(target);
+        console.log(config);
+        if (config == "light") {
+            localStorage.theme = 'dark';
+        } else if (config == "dark") {
+            localStorage.removeItem('theme');
+        } else {
+            localStorage.theme = 'light';
+        }
+
+        getAppeareance();
+    })
+</script>
