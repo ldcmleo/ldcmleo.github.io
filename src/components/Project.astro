@@ -21,9 +21,9 @@ const { Data } = Astro.props
             <span class="text-teal-500 md:text-zinc-900 dark:text-white">{Data.at.company}</span>
         }
     </h2>
-    <ul class="pl-10 pt-4 space-y-2 text-sm">
+    <ul class="pl-10 pt-4 space-y-2 text-sm max-h-[450px] overflow-y-scroll">
         {Data.tasks.map((task: Task, index: number) => (
-            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="task-item py-2 px-3 text-left rounded bg-zinc-300 bg-opacity-55 hover:bg-teal-700 hover:text-white focus:bg-teal-700 focus:text-white dark:bg-zinc-800 dark:bg-opacity-55 transition-all ease-linear duration-200" id={Data.id + "_task_" + index}>{task.description}</button>
+            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="w-[97%] task-item py-2 px-3 text-left rounded bg-zinc-300 bg-opacity-55 hover:bg-teal-700 hover:text-white focus:bg-teal-700 focus:text-white dark:bg-zinc-800 dark:bg-opacity-55 transition-all ease-linear duration-200" id={Data.id + "_task_" + index}>{task.description}</button>
         ))}
     </ul>
 </div>
