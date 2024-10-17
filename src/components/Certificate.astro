@@ -1,7 +1,7 @@
 ---
 const { data } = Astro.props;
 ---
-<a href={ data.url } class="group relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden hover:bg-teal-600 hover:bg-opacity-15 dark:hover:bg-teal-900 dark:hover:bg-opacity-15 transition-colors duration-200 ease-in">
+<a target="_blank" href={ data.url } class="group relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden hover:bg-teal-600 hover:bg-opacity-15 dark:hover:bg-teal-900 dark:hover:bg-opacity-15 transition-colors duration-200 ease-in">
     <div class="granulado"></div>
     <span class="absolute top-1 left-2 text-sm text-gray-500">{ data.date }</span>
     <span class="absolute top-2 right-2 group-hover:top-1 group-hover:right-1 nf nf-oct-arrow_up_right transition-all ease-linear duration-200"></span>
