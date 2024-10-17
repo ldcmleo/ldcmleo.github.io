@@ -1,0 +1,40 @@
+---
+import Certificate from "./Certificate.astro";
+import Title from "./Title.astro";
+const certificatesData = [
+    {
+        title: "Docker de Cero a Experto",
+        company: {
+            name: "Udemy",
+            url: "https://www.udemy.com"
+        },
+        date: "October 2024",
+        id: "UC-ae956450-4aef-45b7-be4b-00187c055970",
+        url: "https://www.udemy.com/certificate/UC-ae956450-4aef-45b7-be4b-00187c055970/",
+        skills: [
+            "Docker",
+            "Docker Swarm",
+            "Kubernetes"
+        ]
+    },
+    {
+        title: "Aprende Redis desde Cero",
+        company: {
+            name: "Udemy",
+            url: "https://www.udemy.com"
+        },
+        date: "December 2023",
+        id: "UC-b800e1ec-2172-4305-a25b-5e8a8d18172e",
+        url: "https://www.udemy.com/certificate/UC-b800e1ec-2172-4305-a25b-5e8a8d18172e/",
+        skills: [
+            "Redis"
+        ]
+    }
+];
+---
+<section class="grid grid-cols-8 gap-4 mx-2 pb-4 lg:mx-0">
+    <Title Text="Certificates" IconClass="nf-md-certificate" ColSpan="col-span-8" />
+    {certificatesData.map((certificate) => (
+        <Certificate data={certificate} />
+    ))}
+</section>
