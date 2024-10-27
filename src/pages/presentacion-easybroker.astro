@@ -1,0 +1,44 @@
+---
+import NavbarThemeToggler from '../components/NavbarThemeToggler.astro';
+import Layout from '../layouts/Layout.astro';
+import ProfileImage from '@public/assets/media/images/profile.webp';
+---
+<Layout title="Carta de Presentación EasyBroker">
+    <main class="max-w-3xl mx-auto px-2 pb-72">
+        <header class="flex justify-between items-center py-2">
+            <a class="share text-xs uppercase hover:text-teal-600 transition-colors ease-in duration-150" href="/">Ir a página principal</a>
+            <NavbarThemeToggler />
+        </header>
+        <section class="pt-28">
+            <div class="text-right">
+                <h1 class="share text-2xl md:text-4xl text-teal-600">Leonardo Daniel Castro Morales</h1>
+                <h2 class="share text-xl md:text-2xl text-gray-700 uppercase">Desarrollador Web fullstack</h2>
+                <h3 class="share text-xl text-gray-700">ldcmleo19@gmail.com</h3>
+            </div>
+        </section>
+        <section class="pt-28">
+            <div class="block">
+                <div class="">
+                    <h1 class="share text-4xl text-teal-600 pb-4">Estimado equipo de EasyBroker</h1>
+                    <p class="pb-8">Desde que conocí la oportunidad de postularme como desarrollador Full Stack Junior en EasyBroker, he sentido una gran afinidad con los valores que impulsan su trabajo. Fue como un chispazo que recorrío mi cuerpo. Su compromismo con la búsqueda constante de la excelencia, y el enfoque en la integridad y honestidad son principios que también guían mi propio desarrollo personal y profesional, y me emociona la idea de contribuir a una empresa que promueve estos valores.</p>
+                    <div class="md:float-left bg-teal-600 w-max rounded-2xl overflow-hidden mx-auto md:mr-3">
+                        <img class="w-[300px] h-[300px] drop-shadow-2xl" src={ProfileImage.src} alt="Profile picture">
+                    </div>
+                    <h1 class="share text-4xl text-gray-500">Sobre mi</h1>
+                    <p>Mi nombre es Leonardo, tengo 27 años y soy un desarrollador de software independiente de Reynosa, Tamaulipas, México. Estudié ocho semestres en la carrera de Ingeniería en Tecnologías de la Información y Comunicación.</p>
+                    <p>Mi trayectoria profesional me ha llevado a trabajar en diversos proyectos de desarrollo web personalizados para pequeños negocios, donde he tenido la oportunidad de aprender y adaptarme rápidamente a nuevas tecnologías y desafíos. Esto incluye no solo la creación de interfaces atractivas y funcionales, sino también el diseño y optimización de estructuras de bases de datos para asegurar un rendimiento óptimo. Además, en mi trabajo anterior como programador junior en una empresa de software para declaración de impuestos, he aprendido a trabajar en equipo y a aportar soluciones precisas y eficientes, cualidades que creo encajan perfectamente con la cultura de excelencia que caracteriza a EasyBroker.</p>
+                    <h1 class="share text-4xl text-gray-500 pt-8">Porqué Yo</h1>
+                    <p>Me considero una persona sencilla y pragmática, y me adapto fácilmente a distintas tecnologías según sea necesario para desarrollar cada solución prevista. Vivo en constante aprendizaje y estoy profundamente apasionado por descubrir cosas nuevas e interesantes, por lo que no tendría ningún inconveniente en aprender nuevas herramientas o flujos de trabajo. Además, soy un entusiasta del lenguaje de programación Ruby y del framework Ruby on Rails. Cuando se trata de escribir código, mi prioridad es que no se repita, sea eficiente y fácil de leer. Cuando un tema me interesa, suelo investigar a fondo, preguntar, buscar y escudriñar para encontrar esos pequeños detalles que me permiten conectar. Creo que esta combinación de curiosidad, rapidez de aprendizaje y enfoque en resultados me permite no solo integrarme en un equipo de desarrollo, sino también aportar un impulso extra hacia la excelencia que buscan en su empresa.</p>
+                    <p class="pt-8">Agradezco sinceramente su tiempo y la oportunidad de postularme para este puesto. Estoy a su disposición.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+<style>
+    p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        font-family: "Poppins", sans-serif;
+    }
+</style>
