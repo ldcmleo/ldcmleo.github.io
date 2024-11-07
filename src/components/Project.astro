@@ -13,7 +13,7 @@ const { Data } = Astro.props
             <div class="skill"><i class={skill}></i></div>
         ))}
     </div>
-    <h1 class="pl-10 text-2xl text-teal-700">{Data.role}</h1>
+    <h1 class="pl-10 text-xl lg:text-3xl text-teal-700">{Data.role}</h1>
     <h2 class="pl-10 text-sm text-zinc-900 dark:text-white font-bold">
         {Data.at.isLink ?
             <a class="text-teal-500 md:text-zinc-900 dark:text-white hover:text-teal-500 transition-all duration-150 ease-in" href={Data.at.url}>{Data.at.company}</a>
@@ -21,9 +21,9 @@ const { Data } = Astro.props
             <span class="text-teal-500 md:text-zinc-900 dark:text-white">{Data.at.company}</span>
         }
     </h2>
-    <ul class="pl-10 pt-4 space-y-2 text-sm max-h-[450px] overflow-y-scroll">
+    <ul class="pl-10 pt-4 space-y-2 lg:max-h-[450px]">
         {Data.tasks.map((task: Task, index: number) => (
-            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="w-[97%] task-item py-2 px-3 text-left rounded bg-zinc-300 bg-opacity-55 hover:bg-teal-700 hover:text-white focus:bg-teal-700 focus:text-white dark:bg-zinc-800 dark:bg-opacity-55 transition-all ease-linear duration-200" id={Data.id + "_task_" + index}>{task.description}</button>
+            <button project-id={Data.id} skill-classes={task.skills.join(" ")} class="w-[97%] task-item py-2 px-3 text-left rounded text-sm bg-zinc-300 bg-opacity-55 hover:bg-teal-700 hover:text-white focus:bg-teal-700 focus:text-white dark:bg-zinc-800 dark:bg-opacity-55 transition-all ease-linear duration-200" id={Data.id + "_task_" + index}>{task.description}</button>
         ))}
     </ul>
 </div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Title from "./Title.astro";
 
 interface License {
     key: string;
@@ -14,6 +13,7 @@ interface Repo {
     html_url: string
     description: string
     tags_url: string
+    fork: boolean
     forks: number
     stargazers_count: number
     topics?: string[]
@@ -41,6 +41,7 @@ const topicClasses: { [key: string]: string} = {
     nodejs: "nf-fa-node text-green-500",
     laravel: "nf-dev-laravel text-red-500",
     ruby: "nf-dev-ruby text-red-500",
+    rails: "nf-seti-rails text-red-500",
     rust: "nf-dev-rust text-red-700",
     python: "nf-dev-python text-yellow-500",
     makefile: "nf-dev-terminal text-green-500",
@@ -71,13 +72,17 @@ function Repository(props: { data: Repo }) {
             <div className="granulado"></div>
             {license && <div className="license text-gray-500 dark:text-gray-600">{license?.spdx_id}</div>}
             <span className="absolute top-2 right-2 nf nf-oct-arrow_up_right transition-all ease-linear duration-200"></span>
-            <h1 className="share capitalize text-xl text-teal-700">{props.data.name}</h1>
-            <h2 className="sharetech text-sm pb-8 flex-grow">{props.data.description}</h2>
+            <h1 className="share capitalize text-2xl text-teal-700">{props.data.name}</h1>
+            <h2 className="share text-slate-800 dark:text-slate-200 min-h-[180px] text-sm pb-8 flex-grow">{props.data.description}</h2>
             <div className="flex justify-between">
                 <div className="space-x-2 text-[28px]">
-                    {topics.map((topic: string) => (
-                        <i key={topic} className={"nf " + topic}></i>
-                    ))}
+                    {props.data.fork ? 
+                        <p className="text-lg text-yellow-800"><i className="nf nf-cod-repo_forked"></i> <span className="share uppercase">fork</span></p>
+                    :
+                        topics.map((topic: string) => (
+                            <i key={topic} className={"nf " + topic}></i>
+                        ))
+                    }
                 </div>
                 <div className="flex items-center space-x-2">
                     <i className="nf nf-cod-repo_forked"> {props.data.forks}</i>
@@ -104,6 +109,7 @@ function Repositories() {
     
                 const data = await response.json();
                 const final_data = data.filter((repo: Repo) => !ExcludedRepositories.includes(repo.name));
+                console.log(final_data);
                 setRepos(final_data);
             } catch (err) {
                 if (err instanceof Error) {
@@ -124,8 +130,8 @@ function Repositories() {
             <div className="relative col-span-12 pt-32 pb-16 overflow-hidden rounded-md shadow-md">
                 <div className="granulado"></div>
                 <div className="px-4 flex items-center justify-center space-x-3 text-teal-700">
-                    <b className={"nf nf-fa-github_square text-3xl"}></b>
-                    <h1 className="font-bold text-4xl share">Github Repositories</h1>
+                    <b className="nf nf-fa-github_square text-4xl"></b>
+                    <h1 className="font-bold text-5xl share">Github Repositories</h1>
                 </div>
             </div>
             { loading ? (

@@ -1,20 +1,26 @@
 ---
 const { data } = Astro.props;
 ---
-<a target="_blank" href={ data.url } class="group relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden hover:bg-teal-600 hover:bg-opacity-15 dark:hover:bg-teal-900 dark:hover:bg-opacity-15 transition-colors duration-200 ease-in">
+<a target="_blank" href={ data.url } class="group min-h-[350px] relative col-span-8 md:col-span-4 p-8 rounded-md shadow-md overflow-hidden hover:bg-teal-600 hover:bg-opacity-15 dark:hover:bg-teal-900 dark:hover:bg-opacity-15 transition-colors duration-200 ease-in">
     <div class="granulado"></div>
     <span class="absolute top-1 left-2 text-sm text-gray-500">{ data.date }</span>
     <span class="absolute top-2 right-2 group-hover:top-1 group-hover:right-1 nf nf-oct-arrow_up_right transition-all ease-linear duration-200"></span>
-    <div class="flex justify-between">
-        <h1 class="sharetech text-teal-600 text-xl">{ data.title }</h1>
-        <h2 class="text-bold text-lg">{ data.company.name }</h2>
-    </div>
-    <p class="text-sm text-gray-500">ID: { data.id }</p>
-    <span class="block pt-16"><i class="nf nf-fa-book"></i> Learned Skills</span>
-    <div class="space-x-2">
-        {data.skills.map((skill: string) => (
-            <span>{skill}</span>
-        ))}
+    <div class="flex flex-col h-full justify-end">
+        <div class="flex justify-between">
+            <h1 class="sharetech text-teal-600 text-xl lg:text-3xl">{ data.title }</h1>
+            <h2 class="text-bold text-xl text-slate-300">{ data.company.name }</h2>
+        </div>
+        <p class="text-sm text-gray-500">ID: { data.id }</p>
+        <div class="flex-grow flex items-end">
+            <div>
+                <span class="block pb-2"><i class="nf nf-fa-book"></i> Learned Skills</span>
+                <div class="space-x-4">
+                    {data.skills.map((skill: string) => (
+                        <span class="text-base md:text-xl sharetech">{skill}</span>
+                    ))}
+                </div>
+            </div>
+        </div>
     </div>
 </a>
 <style>
