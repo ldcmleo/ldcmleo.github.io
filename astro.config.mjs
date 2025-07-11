@@ -9,4 +9,8 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://ldcmleo.github.io/',
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'es',
+  },
 });

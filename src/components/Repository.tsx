@@ -68,28 +68,28 @@ function Repository(props: { data: Repo }) {
     }, []);
 
     return (
-        <a href={props.data.html_url} className="relative overflow-hidden flex flex-col col-span-12 md:col-span-6 lg:col-span-4 p-8 rounded-md shadow-md hover:bg-teal-600 hover:bg-opacity-15 dark:hover:bg-teal-900 dark:hover:bg-opacity-15 transition-colors duration-200 ease-in" target="_blank">
-            <div className="granulado"></div>
-            {license && <div className="license text-gray-500 dark:text-gray-600">{license?.spdx_id}</div>}
-            <span className="absolute top-2 right-2 nf nf-oct-arrow_up_right transition-all ease-linear duration-200"></span>
-            <h1 className="share capitalize text-2xl text-teal-700">{props.data.name}</h1>
-            <h2 className="share text-slate-800 dark:text-slate-200 min-h-[180px] text-sm pb-8 flex-grow">{props.data.description}</h2>
-            <div className="flex justify-between">
-                <div className="space-x-2 text-[28px]">
+        <div className="md:flex md:space-x-4">
+            <div className="min-w-[120px] space-y-2 flex justify-between w-full md:max-w-[120px] md:block">
+                <div className="space-x-2">
                     {props.data.fork ? 
-                        <p className="text-lg text-yellow-800"><i className="nf nf-cod-repo_forked"></i> <span className="share uppercase">fork</span></p>
+                        <p className="text-zinc-700 dark:text-zinc-400"><i className="nf nf-cod-repo_forked"></i> <span className="share">fork</span></p>
                     :
                         topics.map((topic: string) => (
                             <i key={topic} className={"nf " + topic}></i>
                         ))
                     }
                 </div>
-                <div className="flex items-center space-x-2">
-                    <i className="nf nf-cod-repo_forked"> {props.data.forks}</i>
-                    <i className="nf nf-md-star text-yellow-500"> {props.data.stargazers_count}</i>
+                <div className="flex items-center space-x-2 text-sm">
+                    <i className="nf nf-cod-repo_forked text-zinc-700 dark:text-zinc-400"> {props.data.forks}</i>
+                    <i className="nf nf-md-star text-zinc-700 dark:text-zinc-400"> {props.data.stargazers_count}</i>
                 </div>
             </div>
-        </a>
+            <div>
+                <h1 className="capitalize text-lg"><a href={props.data.html_url} className="hover:text-teal-700 transition-all ease-linear duration-200" target="_blank">{props.data.name} <span className="nf nf-oct-arrow_up_right"></span></a></h1>
+                {license && <div className="text-zinc-600">{license?.spdx_id}</div>}
+                <div className="text-zinc-700 dark:text-zinc-400 min-h-[100px] text-sm pb-8 flex-grow">{props.data.description}</div>
+            </div>
+        </div>
     );
 }
 
@@ -126,24 +126,17 @@ function Repositories() {
     }, []);
 
     return (
-        <section className="grid grid-cols-12 gap-4 mx-2 pb-4 lg:mx-0">
-            <div className="relative col-span-12 pt-32 pb-16 overflow-hidden rounded-md shadow-md">
-                <div className="granulado"></div>
-                <div className="px-4 flex items-center justify-center space-x-3 text-teal-700">
-                    <b className="nf nf-fa-github_square text-4xl"></b>
-                    <h1 className="font-bold text-5xl share">Github Repositories</h1>
-                </div>
-            </div>
+        <div className="space-y-4">
             { loading ? (
                 <div className="relative col-span-12 pt-32 pb-16 overflow-hidden rounded-md shadow-md">
                     <div className="granulado"></div>
-                    <p className="text-center share">Cargando Repositorios...</p>
+                    <p className="text-center share">...</p>
                 </div>
             ) : (
                 error ? (
                     <div className="relative col-span-12 pt-32 pb-16 overflow-hidden rounded-md shadow-md">
                         <div className="granulado"></div>
-                        <p className="text-center share">Cargando Repositorios...</p>
+                        <p className="text-center share">...</p>
                     </div>
                 ) : (
                     repos.map((repo: Repo) => (
@@ -151,7 +144,7 @@ function Repositories() {
                     ))
                 )
             ) }
-        </section>
+        </div>
     );
 }
 

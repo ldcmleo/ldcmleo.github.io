@@ -7,15 +7,15 @@ import Layout from "@layouts/Layout.astro";
 const ProjectsData = [
     {
         id: "project1",
-        role: "Desarrollador de Aplicaciones Web",
-        time: "2024 - Presente",
+        role: "Web Application Developer",
+        time: "2024 - Present",
         location: "Reynosa, Tamaulipas, México",
         at: {
-            company: "Profesional Independiente",
+            company: "Profesional Freelancer",
             isLink: false,
             url: ""
         },
-        description: "Como desarrollador web autónomo, me he especializado en diseñar y construir soluciones digitales eficientes, escalables y enfocadas a las necesidades reales de cada cliente.",
+        description: "As an autonomous web developer, I have specialized in designing and building efficient digital solutions, scalable and focused on the real needs of each client.",
         skills: [
             { name: "Go", icon: "nf-md-language_go", color: "#00ADD8" },
             { name: "NextJs", icon: "nf-dev-nextjs", color: "#000000" },
@@ -31,7 +31,7 @@ const ProjectsData = [
     },
     {
         id: "project2",
-        role: "Desarrollador Fullstack JR",
+        role: "Fullstack Developer JR",
         time: "2023 - 2024",
         location: "Reynosa, Tamaulipas, México",
         at: {
@@ -39,7 +39,7 @@ const ProjectsData = [
             isLink: false,
             url: ""
         },
-        description: "Diseñé y desarrollé interfaces de usuario responsivas utilizando HTML, JavaScript y W3.CSS, mientras optimizaba y mantenía los endpoints del backend con PHP para mejorar el rendimiento del sistema. Adicionalmente, arquitecté y desplegué microservicios personalizados con PHP y Docker, y colaboré en un entorno de control de versiones con Git, asegurando un código limpio y documentado bajo las mejores prácticas de la industria.",
+        description: "I designed and developed responsive user interfaces using HTML, JavaScript and W3.CSS, while optimizing and maintaining the backend endpoints with PHP to improve system performance. Additionally, architect and deployed personalized micros Services with PHP and Docker, and I collaborated in a git version control environment, ensuring a clean and documented code under the best practices of the industry.",
         skills: [
             { name: "Docker", icon: "nf-fa-docker", color: "#2496ED" },
             { name: "Git", icon: "nf-md-git", color: "#F05032" },
@@ -52,7 +52,7 @@ const ProjectsData = [
     },
     {
         id: "project3",
-        role: "Desarrollador web",
+        role: "Web Developer",
         time: "2021 - 2021",
         location: "Reynosa, Tamaulipas, México",
         at: {
@@ -60,7 +60,7 @@ const ProjectsData = [
             isLink: false,
             url: ""
         },
-        description: "Diseñé una estructura de sitio web integral que incluye secciones clave como Contacto, Acerca de nosotros, Servicios y Galería, lo que garantiza una experiencia de navegación lógica y fácil de usar.",
+        description: "I designed an integral website structure that includes key sections such as contact, about us, services and gallery, which guarantees a logical and easy -to -use navigation experience.",
         skills: [
             { name: "HTML", icon: "nf-dev-html5", color: "#E34F26" },
             { name: "CSS", icon: "nf-dev-css3", color: "#1572B6" },
@@ -69,7 +69,7 @@ const ProjectsData = [
     },
     {
         id: "project4",
-        role: "Programador Fullstack",
+        role: "Fullstack Developer",
         time: "2021 - 2021",
         location: "Reynosa, Tamaulipas, México",
         at: {
@@ -77,7 +77,7 @@ const ProjectsData = [
             isLink: false,
             url: ""
         },
-        description: "Diseñé una estructura de sitio web estandarizada que incorpora secciones esenciales como Contacto, Acerca de nosotros y Productos. Desarrollé un backend sólido para respaldar el sitio web utilizando el Framework Laravel, lo que garantiza un manejo eficiente de los datos. Creé y optimicé una estructura de base de datos MySQL, implementando migraciones a través del ORM de Laravel para garantizar la integridad y la escalabilidad de los datos.",
+        description: "I designed a standardized website structure that incorporates essential sections such as contact, about us and products. I developed a solid backend to support the website using the Laravel framework, which guarantees efficient data management. I created and optimized an MySQL database structure, implementing migrations through the Laravel ORM to guarantee the integrity and scalability of the data.",
         skills: [
             { name: "HTML", icon: "nf-dev-html5", color: "#E34F26" },
             { name: "CSS", icon: "nf-dev-css3", color: "#1572B6" },
@@ -88,10 +88,9 @@ const ProjectsData = [
         ]
     }
 ]
-
 ---
-<Layout title="Leonardo Castro Web oficial, portafolio y CV">
-    <main class="box mx-auto px-2">
+<Layout title="Leonardo Castro Official Website, Portfolio and CV">
+	<main class="box mx-auto px-2">
         <!-- header -->
         <header class="pt-32">
             <div class="flex justify-between items-center space-x-8">
@@ -100,7 +99,7 @@ const ProjectsData = [
                 </div>
                 <div class="flex-grow">
                     <h1 class="text-lg font-bold">Leonardo Daniel Castro Morales</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Desarrollador Backend/Fullstack</h2>
+                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Backend/Fullstack Developer</h2>
                     <h3 class="text-md text-zinc-600 dark:text-zinc-600 space-x-2">
                         <a href="https://www.linkedin.com/in/ldcmleo" class="hover:text-teal-600"><i class="nf nf-dev-linkedin"></i> Linkedin</a>
                         <a href="https://github.com/ldcmleo" class="hover:text-teal-600"><i class="nf nf-cod-github"></i> Github</a>
@@ -110,13 +109,13 @@ const ProjectsData = [
             </div>
         </header>
         <section class="pt-12">
-            <h1 class="text-lg">Sobre mi</h1>
+            <h1 class="text-lg">About me</h1>
             <div class="text-zinc-700 dark:text-zinc-400">
-                <p>Soy un desarrollador backend autodidacta con enfoque en la creación de plataformas funcionales, simples y sostenibles. Me interesa tanto la ingeniería del software como su impacto en el mundo real. Actualmente trabajo principalmente con Go, diseño de APIs REST, microservicios, y bases de datos SQL.</p>
+                <p>I am a self-taught Backend developer with focus on the creation of functional, simple and sustainable platforms. I am interested in both software engineering and its impact on the real world. I currently work with Go, APIS Rest design, microservices, and SQL databases.</p>
             </div>
         </section>
         <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Experiencia</h1>
+            <h1 class="text-lg pb-8">Experience</h1>
             <div class="space-y-8">
             {
                 ProjectsData.map((obj: any) => (
@@ -126,67 +125,67 @@ const ProjectsData = [
             </div>
         </section>
         <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Educación</h1>
+            <h1 class="text-lg pb-8">Education</h1>
             <div class="md:flex md:space-x-4">
                 <div class="min-w-[120px]">
                     <span class="text-sm text-zinc-700 dark:text-zinc-400">2015 - 2020</span>
                 </div>
                 <div>
                     <h1>TecNM Campus Reynosa</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Ingeniería en Tecnologías de la información y comunicación</h2>
+                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Engineering in Information and Communication Technologies</h2>
                 </div>
             </div>
-            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Certificados</h2>
+            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Certificates</h2>
             <Certificates />
         </section>
         <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Más sobre mi</h1>
+            <h1 class="text-lg pb-8">More about me</h1>
             <div class="space-y-8">
                 <div class="md:flex md:space-x-4">
                     <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Cumpleaños</span>
+                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Birthday</span>
                     </div>
                     <div>
-                        <h1>Marzo 5</h1>
+                        <h1>March 5</h1>
                     </div>
                 </div>
                 <div class="md:flex md:space-x-4">
                     <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Idiomas</span>
+                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Languages</span>
                     </div>
                     <div>
-                        <h1>Español - Nativo</h1>
-                        <h2 class="text-md text-zinc-700 dark:text-zinc-400">Inglés - B1</h2>
-                        <h3 class="text-md text-zinc-700 dark:text-zinc-400">Checo - A1</h3>
+                        <h1>Spanish - Native</h1>
+                        <h2 class="text-md text-zinc-700 dark:text-zinc-400">English - B1</h2>
+                        <h3 class="text-md text-zinc-700 dark:text-zinc-400">Czech - A1</h3>
                     </div>
                 </div>
             </div>
-            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Otros proyectos</h2>
+            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Other Projects</h2>
             <div class="space-y-8">
                 <div class="md:flex md:space-x-4">
                     <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Diciembre 2020</span>
+                        <span class="text-sm text-zinc-700 dark:text-zinc-400">December 2020</span>
                     </div>
                     <div>
                         <div class="w-[65px] h-[120px] bg-center bg-cover bg-no-repeat mb-2" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');"></div>
                         <h1>Escritura creativa</h1>
-                        <p class="text-sm text-zinc-700 dark:text-zinc-400">Escribí un cuento corto llamado 'Padre`, una historia de reflexión sobre la vida y las relaciones interpersonales. Puedes leerlo en <a target="_blank" href="https://www.megustaescribir.com/obra/106275/padre" class="hover:text-teal-600 transition-all ease-in duration-150 underline">megustaescribir.com</a></p>
+                        <p class="text-sm text-zinc-700 dark:text-zinc-400">I wrote a short story called 'Father`, a story of reflection on life and interpersonal relationships. You can read it in <a target="_blank" href="https://www.megustaescribir.com/obra/106275/padre" class="hover:text-teal-600 transition-all ease-in duration-150 underline">megustaescribir.com</a></p>
                     </div>
                 </div>
                 <div class="md:flex md:space-x-4">
                     <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">2023 - Presente</span>
+                        <span class="text-sm text-zinc-700 dark:text-zinc-400">2023 - Present</span>
                     </div>
                     <div>
                         <div class="w-[100px] h-[80px] bg-center bg-cover bg-no-repeat rounded-md mb-2" style="background-image: url('https://img.itch.zone/aW1nLzE2NzQ5ODYzLnBuZw==/315x250%23c/VueAIQ.png');"></div>
-                        <h1>Juego RPG Cozy con <a href="https://ellen0ra.itch.io" class="hover:text-teal-600 transition-all ease-in duration-150 underline">@Ellenora</a></h1>
-                        <p class="text-sm text-zinc-700 dark:text-zinc-400">Como entusiasta de los videojuegos, uno de mis pasatiempos favoritos es el desarrollo de juegos. Este proyecto es un acogedor juego de rol inspirado en juegos como Stardew Valley y Animal Crossing. Se desarrolla completamente en el Godot Game Engine y se pretende como un proyecto de colaboración con Ellenora. Este proyecto simple sirve como práctica para mí y un paso hacia el cumplimiento de uno de mis sueños: publicar oficialmente un juego. A través de este proyecto, su objetivo es refinar mis habilidades en el desarrollo de juegos, trabajar en creatividad colaborativa y aportar una experiencia de juego agradable a los demás.</p>
+                        <h1>RPG Cozy Game with <a href="https://ellen0ra.itch.io" class="hover:text-teal-600 transition-all ease-in duration-150 underline">@Ellenora</a></h1>
+                        <p class="text-sm text-zinc-700 dark:text-zinc-400">As a video game enthusiast, one of my favorite hobbies is the development of games. This project is a cozy role -playing game like Stardew Valley and Animal Crossing. It develops completely in the Godot Game Engine and is intended as a collaboration project with Ellenora. This simple project serves as a practice for me and a step towards fulfilling one of my dreams: officially publishing a game. Through this project, its objective is to refine my skills in games development, work in collaborative creativity and contribute a pleasant game experience to others.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="pt-12 pb-12">
-            <h1 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Repositorios</h1>
+            <h1 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Repositories</h1>
             <Repositories client:visible />
         </section>
     </main>
