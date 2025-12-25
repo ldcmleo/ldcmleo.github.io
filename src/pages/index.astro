@@ -6,14 +6,37 @@ import Layout from "@layouts/Layout.astro";
 
 const ProjectsData = [
     {
+        id: "project5",
+        role: "Desarrollador de aplicaciones",
+        time: "2025 - Presente",
+        location: "Reynosa, Tamaulipas, México",
+        at: {
+            company: "MMS (Multi Servicios Medicos Santander)",
+            isLink: true,
+            link: "https://mmsantander.com.mx/"
+        },
+        description: "Como desarrollador de aplicaciones me dedico a crear sistemas tanto para el funcionamiento interno de la empresa como para sistemas que son usados tanto por usuarios que reciben el servicios como por usuarios que pertenecen a la red medica de la compañia.",
+        skills: [
+            { name: "C#", icon: "nf-seti-c_sharp", color: "#2496ED" },
+            { name: "MS SQL", icon: "nf-seti-db", color: "#2496ED" },
+            { name: "Javascript", icon: "nf-dev-javascript", color: "#F7DF1E"},
+            { name: "Typescript", icon: "nf-md-language_typescript", color: "#3178C6"},
+            { name: "MySQL", icon: "nf-dev-mysql", color: "#457B9D" },
+            { name: "Git", icon: "nf-md-git", color: "#F05032" },
+            { name: "Docker", icon: "nf-fa-docker", color: "#2496ED" },
+            { name: "HTML", icon: "nf-dev-html5", color: "#E34F26" },
+            { name: "css", icon: "nf-dev-css3", color: "#1572B6"}
+        ]
+    },
+    {
         id: "project1",
         role: "Desarrollador de Aplicaciones Web",
-        time: "2024 - Presente",
+        time: "2024 - 2025",
         location: "Reynosa, Tamaulipas, México",
         at: {
             company: "Profesional Independiente",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "Como desarrollador web autónomo, me he especializado en diseñar y construir soluciones digitales eficientes, escalables y enfocadas a las necesidades reales de cada cliente.",
         skills: [
@@ -37,7 +60,7 @@ const ProjectsData = [
         at: {
             company: "Zero Day Software Company",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "Diseñé y desarrollé interfaces de usuario responsivas utilizando HTML, JavaScript y W3.CSS, mientras optimizaba y mantenía los endpoints del backend con PHP para mejorar el rendimiento del sistema. Adicionalmente, arquitecté y desplegué microservicios personalizados con PHP y Docker, y colaboré en un entorno de control de versiones con Git, asegurando un código limpio y documentado bajo las mejores prácticas de la industria.",
         skills: [
@@ -58,7 +81,7 @@ const ProjectsData = [
         at: {
             company: "Comercializadora Alidec",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "Diseñé una estructura de sitio web integral que incluye secciones clave como Contacto, Acerca de nosotros, Servicios y Galería, lo que garantiza una experiencia de navegación lógica y fácil de usar.",
         skills: [
@@ -75,7 +98,7 @@ const ProjectsData = [
         at: {
             company: "Alcomar",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "Diseñé una estructura de sitio web estandarizada que incorpora secciones esenciales como Contacto, Acerca de nosotros y Productos. Desarrollé un backend sólido para respaldar el sitio web utilizando el Framework Laravel, lo que garantiza un manejo eficiente de los datos. Creé y optimicé una estructura de base de datos MySQL, implementando migraciones a través del ORM de Laravel para garantizar la integridad y la escalabilidad de los datos.",
         skills: [
