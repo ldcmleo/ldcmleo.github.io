@@ -119,11 +119,11 @@ const ProjectsData = [
         <header class="pt-32">
             <div class="flex justify-between items-center space-x-8">
                 <div class="bg-teal-600 rounded-full w-[120px]">
-                    <img class="w-[120px] rounded-full" src="assets/media/images/profile2.webp" alt="foto de perfil de Leonardo Castro">
+                    <img class="w-[120px] min-w-[120px] rounded-full" src="assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
                 </div>
                 <div class="flex-grow">
                     <h1 class="text-lg font-bold">Leonardo Daniel Castro Morales</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Desarrollador Backend/Fullstack</h2>
+                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Ingeniero Backend y de Sistemas — diseño software explícito y guiado por dominio en Go.</h2>
                     <h3 class="text-md text-zinc-600 dark:text-zinc-600 space-x-2">
                         <a href="https://www.linkedin.com/in/ldcmleo" class="hover:text-teal-600"><i class="nf nf-dev-linkedin"></i> Linkedin</a>
                         <a href="https://github.com/ldcmleo" class="hover:text-teal-600"><i class="nf nf-cod-github"></i> Github</a>
@@ -135,7 +135,10 @@ const ProjectsData = [
         <section class="pt-12">
             <h1 class="text-lg">Sobre mi</h1>
             <div class="text-zinc-700 dark:text-zinc-400">
-                <p>Soy un desarrollador backend autodidacta con enfoque en la creación de plataformas funcionales, simples y sostenibles. Me interesa tanto la ingeniería del software como su impacto en el mundo real. Actualmente trabajo principalmente con Go, diseño de APIs REST, microservicios, y bases de datos SQL.</p>
+                <p>Soy ingeniero backend y de sistemas, enfocado en diseñar software claro, explícito y alineado con reglas reales de negocio. Trabajo principalmente con Go, construyendo servicios donde el dominio guía la arquitectura, y no al revés.</p>
+                <p>Me especializo en modelar problemas complejos como control de acceso, derechos de uso en el tiempo, reglas de pricing, flujos de autenticación y procesos operativos. Suelo priorizar diseños simples y explícitos sobre abstracciones opacas, buscando sistemas que puedan entenderse, mantenerse y evolucionar por los equipos que los operan.</p>
+                <p>Aplico con frecuencia principios de Domain-Driven Design, no como dogma, sino como una herramienta práctica para reducir ambigüedad y reflejar la realidad del negocio de forma más precisa.</p>
+                <p>Gran parte de mi trabajo se desarrolla como software de código abierto. Esto no es solo una decisión técnica, sino una postura consciente: creo que los sistemas deben ser auditables, soberanos y controlables por quienes dependen de ellos. Me interesan especialmente los backends que funcionan de forma confiable en producción sin depender de cajas negras innecesarias.</p>
             </div>
         </section>
         <section class="pt-12 pb-12">
@@ -146,6 +149,15 @@ const ProjectsData = [
                     <Proyecto data={obj} client:load />
                 ))
             }
+            </div>
+        </section>
+        <section class="pt-12 pb-12">
+            <h1 class="text-lg pb-8">Repositorios</h1>
+            <Repositories client:visible />
+            <div class="w-full">
+                <h1 class="flex justify-center">
+                    <a class="text-center text-md hover:text-teal-700 transition-all ease-linear duration-200" href="https://github.com/ldcmleo">Ver más</a>
+                </h1>
             </div>
         </section>
         <section class="pt-12 pb-12">
@@ -206,15 +218,6 @@ const ProjectsData = [
                         <p class="text-sm text-zinc-700 dark:text-zinc-400">Como entusiasta de los videojuegos, uno de mis pasatiempos favoritos es el desarrollo de juegos. Este proyecto es un acogedor juego de rol inspirado en juegos como Stardew Valley y Animal Crossing. Se desarrolla completamente en el Godot Game Engine y se pretende como un proyecto de colaboración con Ellenora. Este proyecto simple sirve como práctica para mí y un paso hacia el cumplimiento de uno de mis sueños: publicar oficialmente un juego. A través de este proyecto, su objetivo es refinar mis habilidades en el desarrollo de juegos, trabajar en creatividad colaborativa y aportar una experiencia de juego agradable a los demás.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="pt-12 pb-12">
-            <h1 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Repositorios</h1>
-            <Repositories client:visible />
-            <div class="w-full">
-                <h1 class="flex justify-center">
-                    <a class="text-center text-md hover:text-teal-700 transition-all ease-linear duration-200" href="https://github.com/ldcmleo">Ver más</a>
-                </h1>
             </div>
         </section>
     </main>
