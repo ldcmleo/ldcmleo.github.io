@@ -1,7 +1,6 @@
 ---
 import Certificates from "@components/Certificates.astro";
 import Proyecto from "@components/main/Proyecto";
-import Repositories from "@components/Repository";
 import Layout from "@layouts/Layout.astro";
 
 const ProjectsData = [
@@ -36,7 +35,7 @@ const ProjectsData = [
         at: {
             company: "Profesional Freelancer",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "As an autonomous web developer, I have specialized in designing and building efficient digital solutions, scalable and focused on the real needs of each client.",
         skills: [
@@ -60,7 +59,7 @@ const ProjectsData = [
         at: {
             company: "Zero Day Software Company",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "I designed and developed responsive user interfaces using HTML, JavaScript and W3.CSS, while optimizing and maintaining the backend endpoints with PHP to improve system performance. Additionally, architect and deployed personalized micros Services with PHP and Docker, and I collaborated in a git version control environment, ensuring a clean and documented code under the best practices of the industry.",
         skills: [
@@ -81,7 +80,7 @@ const ProjectsData = [
         at: {
             company: "Comercializadora Alidec",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "I designed an integral website structure that includes key sections such as contact, about us, services and gallery, which guarantees a logical and easy -to -use navigation experience.",
         skills: [
@@ -98,7 +97,7 @@ const ProjectsData = [
         at: {
             company: "Alcomar",
             isLink: false,
-            url: ""
+            link: ""
         },
         description: "I designed a standardized website structure that incorporates essential sections such as contact, about us and products. I developed a solid backend to support the website using the Laravel framework, which guarantees efficient data management. I created and optimized an MySQL database structure, implementing migrations through the Laravel ORM to guarantee the integrity and scalability of the data.",
         skills: [
@@ -111,38 +110,42 @@ const ProjectsData = [
         ]
     }
 ]
+
 ---
-<Layout title="Leonardo Castro Official Website, Portfolio and CV">
-	<main class="box mx-auto px-2">
+<Layout title="Leonardo Castro Web oficial, portafolio y CV">
+    <main class="box mx-auto px-4">
         <!-- header -->
-        <header class="pt-32">
-            <div class="flex justify-between items-center space-x-8">
-                <div class="bg-teal-600 rounded-full w-[120px]">
-                    <img class="w-[120px] min-w-[120px] rounded-full" src="/assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
-                </div>
-                <div class="flex-grow">
-                    <h1 class="text-lg font-bold">Leonardo Daniel Castro Morales</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Backend & Systems Engineer — designing explicit, domain-driven software in Go.</h2>
-                    <h3 class="text-md text-zinc-600 dark:text-zinc-600 space-x-2">
+        <header class="pt-16 md:pt-24">
+            <div class="flex max-[320px]:flex-col justify-start min-[321px]:justify-between min-[321]:items-center border border-[#a9b4c6] border-dashed">
+                <img class="max-[467px]:w-[100px] max-w-[180px] border-r border-[#a9b4c6] border-dashed" src="/assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
+                <div class="flex-grow p-4 border-[#a9b4c6] border-dashed header-border-fix">
+                    <h1 class="max-[468px]:text-xs text-lg md:text-xl font-bold">Leonardo Daniel Castro Morales</h1>
+                    <h2 class="max-[468px]:text-xs text-md md:text-lg">Backend & Systems Engineer — designing explicit, domain-driven software in Go.</h2>
+                    <h3 class="max-[468px]:text-xs text-md md:text-lg space-x-2 min-[420px]:pt-2">
                         <a href="https://www.linkedin.com/in/ldcmleo" class="hover:text-teal-600"><i class="nf nf-dev-linkedin"></i> Linkedin</a>
                         <a href="https://github.com/ldcmleo" class="hover:text-teal-600"><i class="nf nf-cod-github"></i> Github</a>
-                        <a href="" class="hover:text-teal-600"><i class="nf nf-md-file_document"></i>CV</a>
                     </h3>
                 </div>
             </div>
         </header>
-        <section class="pt-12">
-            <h1 class="text-lg">About me</h1>
-            <div class="text-zinc-700 dark:text-zinc-400">
+        <section class="border-x border-[#a9b4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pt-16 px-4 pb-4 border-b border-[#a9b4c6] border-dashed">About me</h1>
+            </div>
+            <div class="space-y-4 p-4">
                 <p>I’m a backend and systems engineer focused on designing software that is clear, explicit, and aligned with real-world business rules. I primarily work with Go, building services where the domain drives the architecture, not the other way around.</p>
                 <p>I specialize in modeling complex problems such as access control, usage rights over time, pricing rules, authentication flows, and operational processes. I tend to favor simple, explicit designs over opaque abstractions, aiming for systems that can be understood, maintained, and evolved by the teams that operate them.</p>
                 <p>I frequently apply principles from Domain-Driven Design, not as a dogma, but as a practical tool to reduce ambiguity and make software reflect reality more accurately.</p>
                 <p>A significant part of my work is developed as open-source software. This is not only a technical choice, but a conscious position: I believe systems should be auditable, sovereign, and controllable by the people who depend on them. I’m particularly interested in backend systems that work reliably in production without relying on unnecessary black boxes.</p>
             </div>
         </section>
-        <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Experience</h1>
-            <div class="space-y-8">
+        <section class="border-x border-t border-[#a9d4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Experience</h1>
+            </div>
+            <div class="">
             {
                 ProjectsData.map((obj: any) => (
                     <Proyecto data={obj} client:load />
@@ -150,71 +153,68 @@ const ProjectsData = [
             }
             </div>
         </section>
-        <!-- <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Repositories</h1>
-            <Repositories client:visible />
-            <div class="w-full">
-                <h1 class="flex justify-center">
-                    <a class="text-center text-md hover:text-teal-700 transition-all ease-linear duration-200" href="https://github.com/ldcmleo">See more</a>
-                </h1>
+        <section class="border-x border-[#a9b4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Education</h1>
             </div>
-        </section> -->
-        <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Education</h1>
-            <div class="md:flex md:space-x-4">
-                <div class="min-w-[120px]">
-                    <span class="text-sm text-zinc-700 dark:text-zinc-400">2015 - 2020</span>
+            <div class="md:flex border-b border-[#a9b4c6] border-dashed">
+                <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                    <span class="text-sm">2015 - 2020</span>
                 </div>
-                <div>
+                <div class="p-4">
                     <h1>TecNM Campus Reynosa</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Engineering in Information and Communication Technologies</h2>
+                    <h2 class="text-md ">Engineering in Information and Communication Technologies</h2>
                 </div>
             </div>
-            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Certificates</h2>
+            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Certificates</h2>
             <Certificates />
         </section>
-        <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">More about me</h1>
-            <div class="space-y-8">
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Birthday</span>
+        <section class="border-x border-[#a9b4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">More about me</h1>
+            </div>
+            <div class="border-b border-[#a9b4c6] border-dashed">
+                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-lg">Birthday</span>
                     </div>
-                    <div>
-                        <h1>March 5</h1>
+                    <div class="p-4 hover:dark:text-[#080808] hover:dark:bg-[#EEF0F2] hover:text-[#EEF0F2] hover:bg-[#080808] w-full transition-all ease-in-out duration-300">
+                        <h1 class="text-xs">March 5</h1>
                     </div>
                 </div>
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Languages</span>
+                <div class="md:flex w-full">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-lg">Languages</span>
                     </div>
-                    <div>
-                        <h1>Spanish - Native</h1>
-                        <h2 class="text-md text-zinc-700 dark:text-zinc-400">English - B1</h2>
-                        <h3 class="text-md text-zinc-700 dark:text-zinc-400">Czech - A1</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 w-full">
+                        <h1 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">Spanish - Native</h1>
+                        <h2 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">English - B1</h2>
+                        <h3 class="text-xs p-4">Czech - A1</h3>
                     </div>
                 </div>
             </div>
-            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Other Projects</h2>
-            <div class="space-y-8">
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">December 2020</span>
+            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Other Projects</h2>
+            <div class="border-b border-[#a9b4c6] border-dashed mb-16">
+                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-sm ">December 2020</span>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <div class="w-[65px] h-[120px] bg-center bg-cover bg-no-repeat mb-2" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');"></div>
                         <h1>Escritura creativa</h1>
-                        <p class="text-sm text-zinc-700 dark:text-zinc-400">I wrote a short story called 'Father`, a story of reflection on life and interpersonal relationships. You can read it in <a target="_blank" href="https://www.megustaescribir.com/obra/106275/padre" class="hover:text-teal-600 transition-all ease-in duration-150 underline">megustaescribir.com</a></p>
+                        <p class="text-sm ">I wrote a short story called 'Father`, a story of reflection on life and interpersonal relationships. You can read it in <a target="_blank" href="https://www.megustaescribir.com/obra/106275/padre" class="hover:text-teal-600 transition-all ease-in duration-150 underline">megustaescribir.com</a></p>
                     </div>
                 </div>
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">2023 - Present</span>
+                <div class="md:flex">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-sm ">2023 - Present</span>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <div class="w-[100px] h-[80px] bg-center bg-cover bg-no-repeat rounded-md mb-2" style="background-image: url('https://img.itch.zone/aW1nLzE2NzQ5ODYzLnBuZw==/315x250%23c/VueAIQ.png');"></div>
                         <h1>RPG Cozy Game with <a href="https://ellen0ra.itch.io" class="hover:text-teal-600 transition-all ease-in duration-150 underline">@Ellenora</a></h1>
-                        <p class="text-sm text-zinc-700 dark:text-zinc-400">As a video game enthusiast, one of my favorite hobbies is the development of games. This project is a cozy role -playing game like Stardew Valley and Animal Crossing. It develops completely in the Godot Game Engine and is intended as a collaboration project with Ellenora. This simple project serves as a practice for me and a step towards fulfilling one of my dreams: officially publishing a game. Through this project, its objective is to refine my skills in games development, work in collaborative creativity and contribute a pleasant game experience to others.</p>
+                        <p class="text-sm ">As a video game enthusiast, one of my favorite hobbies is the development of games. This project is a cozy role -playing game like Stardew Valley and Animal Crossing. It develops completely in the Godot Game Engine and is intended as a collaboration project with Ellenora. This simple project serves as a practice for me and a step towards fulfilling one of my dreams: officially publishing a game. Through this project, its objective is to refine my skills in games development, work in collaborative creativity and contribute a pleasant game experience to others.</p>
                     </div>
                 </div>
             </div>

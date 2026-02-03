@@ -1,6 +1,5 @@
 ---
 import Certificate from "./Certificate.astro";
-import Title from "./Title.astro";
 const certificatesData = [
     {
         title: "Docker de Cero a Experto",
@@ -32,7 +31,7 @@ const certificatesData = [
     }
 ];
 ---
-<section class="space-y-8">
+<section class="">
     {certificatesData.map((certificate) => (
         <Certificate data={certificate} />
     ))}

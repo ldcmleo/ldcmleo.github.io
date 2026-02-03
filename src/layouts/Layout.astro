@@ -37,7 +37,8 @@ const actualpathEs = getRelativeLocaleUrl("es", cleanPathname);
             }
         </script>
 	</head>
-	<body class="text-black bg-slate-200 dark:text-white dark:bg-[#020202]">
+	<body class="text-[#080808] bg-[#EEF0F2] dark:text-[#EEF0F2] dark:bg-[#080808]">
+        <div class="granulado"></div>
 		<slot />
 		<NavMenu actualpathEn={actualpathEn} actualpathEs={actualpathEs} client:visible />
 	</body>
@@ -80,23 +81,44 @@ const actualpathEs = getRelativeLocaleUrl("es", cleanPathname);
 	}
 
 	.box {
-		max-width: 650px;
+		max-width: 850px;
 		margin: 0 auto;
 	}
 
 	.granulado {
 		background-color: transparent;
-		background-image: radial-gradient(circle, #23262a, #29353b, #263a3d, #304b4a, #3a5a4d), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+		background-image: radial-gradient(circle, #1C1C1C, #29353b, #263a3d, #304b4a, #3a5a4d), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
 		background-repeat: repeat;
 		background-size: 182px;
-		background-blend-mode: overlay;
-		opacity: 0.1;
+		background-blend-mode: color-burn;
+		opacity: 0.05;
 		top: 0;
 		left: 0;
-		position: absolute;
+		position: fixed;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		z-index: -1;
+	}
+
+	.bg-square {
+    	background-color: transparent;
+        opacity: 0.8;
+        background-image:  linear-gradient(#a9b4c6 1px, transparent 1px), linear-gradient(to right, #a9b4c6 1px, transparent 1px);
+        background-size: 20px 20px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.1;
+	}
+
+	.header-border-fix {
+        @media screen and (max-width:320px) {
+            border-top-width: 1px;
+        }
 	}
 
 	.share, h1, h2, h3 {

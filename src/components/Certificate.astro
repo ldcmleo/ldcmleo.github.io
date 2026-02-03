@@ -1,9 +1,11 @@
 ---
 const { data } = Astro.props;
 ---
-<div class="md:flex md:space-x-4">
-    <span class="text-sm text-gray-500 min-w-[120px]">{ data.date }</span>
-    <div class="flex flex-col h-full justify-end w-full">
+<div class="md:flex border-b border-[#a9b4c6] border-dashed">
+    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+        <span class="text-sm">{ data.date }</span>
+    </div>
+    <div class="flex flex-col h-full justify-end w-full p-4">
         <h1 class="text-lg"><a class="hover:text-teal-600 transition-all duration-300 ease-in" target="_blank" href={ data.url }>{ data.title }</a></h1>
         <div class="">
             <h2 class="text-bold text-sm text-zinc-700 dark:text-zinc-400">{ data.company.name }</h2>
@@ -12,7 +14,7 @@ const { data } = Astro.props;
         <div class="flex-grow flex items-end">
             <div class="space-x-4">
                 {data.skills.map((skill: string) => (
-                    <span class="text-sm text-zinc-700 dark:text-zinc-400">{skill}</span>
+                    <span class="text-sm">{skill}</span>
                 ))}
             </div>
         </div>

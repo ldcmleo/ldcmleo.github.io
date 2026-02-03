@@ -1,7 +1,6 @@
 ---
 import Certificates from "@components/Certificates.astro";
 import Proyecto from "@components/main/Proyecto";
-import Repositories from "@components/Repository";
 import Layout from "@layouts/Layout.astro";
 
 const ProjectsData = [
@@ -114,36 +113,39 @@ const ProjectsData = [
 
 ---
 <Layout title="Leonardo Castro Web oficial, portafolio y CV">
-    <main class="box mx-auto px-2">
+    <main class="box mx-auto px-4">
         <!-- header -->
-        <header class="pt-32">
-            <div class="flex justify-between items-center space-x-8">
-                <div class="bg-teal-600 rounded-full w-[120px]">
-                    <img class="w-[120px] min-w-[120px] rounded-full" src="assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
-                </div>
-                <div class="flex-grow">
-                    <h1 class="text-lg font-bold">Leonardo Daniel Castro Morales</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Ingeniero Backend y de Sistemas — diseño software explícito y guiado por dominio en Go.</h2>
-                    <h3 class="text-md text-zinc-600 dark:text-zinc-600 space-x-2">
+        <header class="pt-16 md:pt-24">
+            <div class="flex max-[320px]:flex-col justify-start min-[321px]:justify-between min-[321]:items-center border border-[#a9b4c6] border-dashed">
+                <img class="max-[467px]:w-[100px] max-w-[180px] border-r border-[#a9b4c6] border-dashed" src="assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
+                <div class="flex-grow p-4 border-[#a9b4c6] border-dashed header-border-fix">
+                    <h1 class="max-[468px]:text-xs text-lg md:text-xl font-bold">Leonardo Daniel Castro Morales</h1>
+                    <h2 class="max-[468px]:text-xs text-md md:text-lg">Ingeniero Backend y de Sistemas — diseño software explícito y guiado por dominio en Go.</h2>
+                    <h3 class="max-[468px]:text-xs text-md md:text-lg space-x-2 min-[420px]:pt-2">
                         <a href="https://www.linkedin.com/in/ldcmleo" class="hover:text-teal-600"><i class="nf nf-dev-linkedin"></i> Linkedin</a>
                         <a href="https://github.com/ldcmleo" class="hover:text-teal-600"><i class="nf nf-cod-github"></i> Github</a>
-                        <a href="" class="hover:text-teal-600"><i class="nf nf-md-file_document"></i>CV</a>
                     </h3>
                 </div>
             </div>
         </header>
-        <section class="pt-12">
-            <h1 class="text-lg">Sobre mi</h1>
-            <div class="text-zinc-700 dark:text-zinc-400">
+        <section class="border-x border-[#a9b4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pt-16 px-4 pb-4 border-b border-[#a9b4c6] border-dashed">Sobre mi</h1>
+            </div>
+            <div class="space-y-4 p-4">
                 <p>Soy ingeniero backend y de sistemas, enfocado en diseñar software claro, explícito y alineado con reglas reales de negocio. Trabajo principalmente con Go, construyendo servicios donde el dominio guía la arquitectura, y no al revés.</p>
                 <p>Me especializo en modelar problemas complejos como control de acceso, derechos de uso en el tiempo, reglas de pricing, flujos de autenticación y procesos operativos. Suelo priorizar diseños simples y explícitos sobre abstracciones opacas, buscando sistemas que puedan entenderse, mantenerse y evolucionar por los equipos que los operan.</p>
                 <p>Aplico con frecuencia principios de Domain-Driven Design, no como dogma, sino como una herramienta práctica para reducir ambigüedad y reflejar la realidad del negocio de forma más precisa.</p>
                 <p>Gran parte de mi trabajo se desarrolla como software de código abierto. Esto no es solo una decisión técnica, sino una postura consciente: creo que los sistemas deben ser auditables, soberanos y controlables por quienes dependen de ellos. Me interesan especialmente los backends que funcionan de forma confiable en producción sin depender de cajas negras innecesarias.</p>
             </div>
         </section>
-        <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Experiencia</h1>
-            <div class="space-y-8">
+        <section class="border-x border-t border-[#a9d4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Experiencia</h1>
+            </div>
+            <div class="">
             {
                 ProjectsData.map((obj: any) => (
                     <Proyecto data={obj} client:load />
@@ -151,71 +153,68 @@ const ProjectsData = [
             }
             </div>
         </section>
-        <!-- <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Repositorios</h1>
-            <Repositories client:visible />
-            <div class="w-full">
-                <h1 class="flex justify-center">
-                    <a class="text-center text-md hover:text-teal-700 transition-all ease-linear duration-200" href="https://github.com/ldcmleo">Ver más</a>
-                </h1>
+        <section class="border-x border-[#a9b4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Estudios</h1>
             </div>
-        </section> -->
-        <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Educación</h1>
-            <div class="md:flex md:space-x-4">
-                <div class="min-w-[120px]">
-                    <span class="text-sm text-zinc-700 dark:text-zinc-400">2015 - 2020</span>
+            <div class="md:flex border-b border-[#a9b4c6] border-dashed">
+                <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                    <span class="text-sm">2015 - 2020</span>
                 </div>
-                <div>
+                <div class="p-4">
                     <h1>TecNM Campus Reynosa</h1>
-                    <h2 class="text-md text-zinc-700 dark:text-zinc-400">Ingeniería en Tecnologías de la información y comunicación</h2>
+                    <h2 class="text-md ">Ingeniería en Tecnologías de la información y comunicación</h2>
                 </div>
             </div>
-            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Certificados</h2>
+            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Certificados</h2>
             <Certificates />
         </section>
-        <section class="pt-12 pb-12">
-            <h1 class="text-lg pb-8">Más sobre mi</h1>
-            <div class="space-y-8">
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Cumpleaños</span>
+        <section class="border-x border-[#a9b4c6] border-dashed">
+            <div class="relative">
+                <div class="bg-square"></div>
+                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Más sobre mi</h1>
+            </div>
+            <div class="border-b border-[#a9b4c6] border-dashed">
+                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-lg">Cumpleaños</span>
                     </div>
-                    <div>
-                        <h1>Marzo 5</h1>
+                    <div class="p-4 hover:dark:text-[#080808] hover:dark:bg-[#EEF0F2] hover:text-[#EEF0F2] hover:bg-[#080808] w-full transition-all ease-in-out duration-300">
+                        <h1 class="text-xs">Marzo 5</h1>
                     </div>
                 </div>
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Idiomas</span>
+                <div class="md:flex w-full">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-lg">Idiomas</span>
                     </div>
-                    <div>
-                        <h1>Español - Nativo</h1>
-                        <h2 class="text-md text-zinc-700 dark:text-zinc-400">Inglés - B1</h2>
-                        <h3 class="text-md text-zinc-700 dark:text-zinc-400">Checo - A1</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 w-full">
+                        <h1 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">Español - Nativo</h1>
+                        <h2 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">Inglés - B1</h2>
+                        <h3 class="text-xs p-4">Checo - A1</h3>
                     </div>
                 </div>
             </div>
-            <h2 class="text-md text-zinc-700 dark:text-zinc-400 pt-8 pb-4">Otros proyectos</h2>
-            <div class="space-y-8">
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">Diciembre 2020</span>
+            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Otros proyectos</h2>
+            <div class="border-b border-[#a9b4c6] border-dashed mb-16">
+                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-sm ">Diciembre 2020</span>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <div class="w-[65px] h-[120px] bg-center bg-cover bg-no-repeat mb-2" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');"></div>
                         <h1>Escritura creativa</h1>
-                        <p class="text-sm text-zinc-700 dark:text-zinc-400">Escribí un cuento corto llamado 'Padre`, una historia de reflexión sobre la vida y las relaciones interpersonales. Puedes leerlo en <a target="_blank" href="https://www.megustaescribir.com/obra/106275/padre" class="hover:text-teal-600 transition-all ease-in duration-150 underline">megustaescribir.com</a></p>
+                        <p class="text-sm ">Escribí un cuento corto llamado 'Padre', una historia de reflexión sobre la vida y las relaciones interpersonales. Puedes leerlo en <a target="_blank" href="https://www.megustaescribir.com/obra/106275/padre" class="hover:text-teal-600 transition-all ease-in duration-150 underline">megustaescribir.com</a></p>
                     </div>
                 </div>
-                <div class="md:flex md:space-x-4">
-                    <div class="min-w-[120px]">
-                        <span class="text-sm text-zinc-700 dark:text-zinc-400">2023 - Presente</span>
+                <div class="md:flex">
+                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
+                        <span class="text-sm ">2023 - Presente</span>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <div class="w-[100px] h-[80px] bg-center bg-cover bg-no-repeat rounded-md mb-2" style="background-image: url('https://img.itch.zone/aW1nLzE2NzQ5ODYzLnBuZw==/315x250%23c/VueAIQ.png');"></div>
                         <h1>Juego RPG Cozy con <a href="https://ellen0ra.itch.io" class="hover:text-teal-600 transition-all ease-in duration-150 underline">@Ellenora</a></h1>
-                        <p class="text-sm text-zinc-700 dark:text-zinc-400">Como entusiasta de los videojuegos, uno de mis pasatiempos favoritos es el desarrollo de juegos. Este proyecto es un acogedor juego de rol inspirado en juegos como Stardew Valley y Animal Crossing. Se desarrolla completamente en el Godot Game Engine y se pretende como un proyecto de colaboración con Ellenora. Este proyecto simple sirve como práctica para mí y un paso hacia el cumplimiento de uno de mis sueños: publicar oficialmente un juego. A través de este proyecto, su objetivo es refinar mis habilidades en el desarrollo de juegos, trabajar en creatividad colaborativa y aportar una experiencia de juego agradable a los demás.</p>
+                        <p class="text-sm ">Como entusiasta de los videojuegos, uno de mis pasatiempos favoritos es el desarrollo de juegos. Este proyecto es un acogedor juego de rol inspirado en juegos como Stardew Valley y Animal Crossing. Se desarrolla completamente en el Godot Game Engine y se pretende como un proyecto de colaboración con Ellenora. Este proyecto simple sirve como práctica para mí y un paso hacia el cumplimiento de uno de mis sueños: publicar oficialmente un juego. A través de este proyecto, su objetivo es refinar mis habilidades en el desarrollo de juegos, trabajar en creatividad colaborativa y aportar una experiencia de juego agradable a los demás.</p>
                     </div>
                 </div>
             </div>
