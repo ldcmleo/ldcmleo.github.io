@@ -1,8 +1,6 @@
 import {
   forwardRef,
-  useEffect,
   useImperativeHandle,
-  useRef,
   useState,
 } from "react";
 
@@ -19,49 +17,24 @@ export type TranslateButtonHandle = {
 const TranslateButton = forwardRef<TranslateButtonHandle, Props>(
   (props, ref) => {
     const [open, setOpen] = useState(false);
+    const [visible, setVisible] = useState(false);
     const { urlEs, urlEn, ...rest } = props;
-    const mainRef = useRef<HTMLDivElement>(null);
-    const esBtnRef = useRef<HTMLButtonElement>(null);
-    const enBtnRef = useRef<HTMLButtonElement>(null);
 
     useImperativeHandle(ref, () => ({
       doShow: () => {
-        if (mainRef.current) {
-          mainRef.current.style.top = "-90px";
-        }
+        setVisible(true);
       },
       doHide: () => {
-        if (mainRef.current) {
-          mainRef.current.style.top = "0px";
-          setOpen(false);
-        }
+        setVisible(false);
+        setOpen(false);
       },
     }));
 
-    useEffect(() => {
-      if (open) {
-        if (esBtnRef.current) {
-          esBtnRef.current.style.left = "-45px";
-        }
-
-        if (enBtnRef.current) {
-          enBtnRef.current.style.left = "-90px";
-        }
-      } else {
-        if (esBtnRef.current) {
-          esBtnRef.current.style.left = "0px";
-        }
-
-        if (enBtnRef.current) {
-          enBtnRef.current.style.left = "0px";
-        }
-      }
-    }, [open]);
-
     return (
       <div
-        ref={mainRef}
-        className="absolute left-0 transition-all ease-in"
+        className={`absolute left-0 top-0 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+          visible ? "-translate-y-[100px] pointer-events-auto opacity-100" : "translate-y-0 pointer-events-none opacity-0"
+        }`}
         style={{
           zIndex: -2,
         }}
@@ -70,30 +43,37 @@ const TranslateButton = forwardRef<TranslateButtonHandle, Props>(
         <div className="relative">
           <button
             onClick={() => setOpen(!open)}
-            className="bg-zinc-300 dark:bg-zinc-600 px-3 py-2 rounded-sm"
+            aria-label="Cambiar idioma de la página"
+            title="Cambiar idioma"
+            aria-expanded={open}
+            className="w-11 h-11 flex items-center justify-center bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 shadow-md hover:bg-zinc-100 dark:hover:bg-zinc-700 active:scale-95 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
           >
-            <i className="nf nf-md-translate"></i>
+            <i className="nf nf-md-translate text-lg"></i>
           </button>
-          <button
-            ref={esBtnRef}
-            onClick={() => (window.location.href = urlEs)}
-            className="absolute top-0 w-[40px] h-[40px] text-center share leading-[40px] rounded-sm bg-zinc-300 dark:bg-zinc-600 transition-all ease-in"
+          <a
+            href={urlEs}
+            aria-label="Cambiar a Español"
+            className={`absolute top-0 w-11 h-11 flex items-center justify-center font-bold text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 shadow-md hover:bg-zinc-100 dark:hover:bg-zinc-700 active:scale-95 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+              open ? "-translate-x-[50px] opacity-100 pointer-events-auto" : "translate-x-0 opacity-0 pointer-events-none"
+            }`}
             style={{
               zIndex: -3,
             }}
           >
             ES
-          </button>
-          <button
-            ref={enBtnRef}
-            onClick={() => (window.location.href = urlEn)}
-            className="absolute top-0 w-[40px] h-[40px] text-center share leading-[40px] rounded-sm bg-zinc-300 dark:bg-zinc-600 transition-all ease-in"
+          </a>
+          <a
+            href={urlEn}
+            aria-label="Switch to English"
+            className={`absolute top-0 w-11 h-11 flex items-center justify-center font-bold text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 shadow-md hover:bg-zinc-100 dark:hover:bg-zinc-700 active:scale-95 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+              open ? "-translate-x-[100px] opacity-100 pointer-events-auto" : "translate-x-0 opacity-0 pointer-events-none"
+            }`}
             style={{
               zIndex: -3,
             }}
           >
             EN
-          </button>
+          </a>
         </div>
       </div>
     );

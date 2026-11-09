@@ -1,40 +1,25 @@
-import { Easing, Tween } from "@tweenjs/tween.js";
 import { forwardRef } from "react";
 
 const UpButton = forwardRef<HTMLButtonElement>((_, ref) => {
   const scroll = () => {
-    const actualScroll = window.scrollY;
-    const coords = {
-      x: 0,
-      y: actualScroll,
-    };
-
-    const tween = new Tween(coords)
-      .to({ x: 0, y: 0 }, 1000)
-      .easing(Easing.Quadratic.InOut)
-      .onUpdate(() => {
-        window.scrollTo(coords.x, coords.y);
-      })
-      .start();
-
-    function animate(time: any) {
-      tween.update(time);
-      requestAnimationFrame(animate);
-    }
-
-    requestAnimationFrame(animate);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
     <button
       onClick={scroll}
-      className="absolute bg-zinc-300 dark:bg-zinc-600 px-3 py-2 rounded-sm left-0 transition-all ease-in"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+      className="absolute left-0 top-0 w-11 h-11 flex items-center justify-center bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 shadow-md hover:bg-zinc-100 dark:hover:bg-zinc-700 active:scale-95 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
       style={{
         zIndex: -1,
       }}
       ref={ref}
     >
-      <i className="nf nf-fa-angles_up"></i>
+      <i className="nf nf-fa-angles_up text-lg"></i>
     </button>
   );
 });

@@ -1,8 +1,7 @@
 import { forwardRef, useEffect, useState } from "react";
 
 const ThemeButton = forwardRef<HTMLButtonElement>((_, ref) => {
-  const [dark, setDark] = useState(false);
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState<"dark" | "light" | "default">("default");
 
   useEffect(() => {
     getAppearance();
@@ -11,21 +10,17 @@ const ThemeButton = forwardRef<HTMLButtonElement>((_, ref) => {
   const getAppearance = () => {
     if (localStorage.theme === "dark") {
       setMode("dark");
-      setDark(true);
       document.documentElement.classList.add("dark");
     } else if (localStorage.theme === "light") {
       setMode("light");
-      setDark(false);
       document.documentElement.classList.remove("dark");
     } else {
       if (
         !("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        setDark(true);
         document.documentElement.classList.add("dark");
       } else {
-        setDark(false);
         document.documentElement.classList.remove("dark");
       }
 
@@ -56,16 +51,29 @@ const ThemeButton = forwardRef<HTMLButtonElement>((_, ref) => {
     }
   };
 
+  const getAriaLabel = (): string => {
+    switch (mode) {
+      case "dark":
+        return "Cambiar a modo automático / sistema";
+      case "light":
+        return "Cambiar a modo oscuro";
+      default:
+        return "Cambiar a modo claro";
+    }
+  };
+
   return (
     <button
       onClick={setTheme}
-      className="absolute bg-zinc-300 dark:bg-zinc-600 px-3 py-2 rounded-sm left-0 transition-all ease-in"
+      aria-label={getAriaLabel()}
+      title={getAriaLabel()}
+      className="absolute left-0 top-0 w-11 h-11 flex items-center justify-center bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-700 shadow-md hover:bg-zinc-100 dark:hover:bg-zinc-700 active:scale-95 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
       style={{
         zIndex: -1,
       }}
       ref={ref}
     >
-      <i className={getThemeIcon()}></i>
+      <i className={`${getThemeIcon()} text-lg`}></i>
     </button>
   );
 });

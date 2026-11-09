@@ -112,101 +112,171 @@ const ProjectsData = [
 ]
 
 ---
-<Layout title="Leonardo Castro Web oficial, portafolio y CV">
+<Layout title="Leonardo Castro | Ingeniero Backend y de Sistemas" lang="es">
     <main class="box mx-auto px-4">
         <!-- header -->
-        <header class="pt-16 md:pt-24">
-            <div class="flex max-[320px]:flex-col justify-start min-[321px]:justify-between min-[321]:items-center border border-[#a9b4c6] border-dashed">
-                <img class="max-[467px]:w-[100px] max-w-[180px] border-r border-[#a9b4c6] border-dashed" src="assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
-                <div class="flex-grow p-4 border-[#a9b4c6] border-dashed header-border-fix">
-                    <h1 class="max-[468px]:text-xs text-lg md:text-xl font-bold">Leonardo Daniel Castro Morales</h1>
-                    <h2 class="max-[468px]:text-xs text-md md:text-lg">Ingeniero Backend y de Sistemas — diseño software explícito y guiado por dominio en Go.</h2>
-                    <h3 class="max-[468px]:text-xs text-md md:text-lg space-x-2 min-[420px]:pt-2">
-                        <a href="https://www.linkedin.com/in/ldcmleo" class="hover:text-teal-600"><i class="nf nf-dev-linkedin"></i> Linkedin</a>
-                        <a href="https://github.com/ldcmleo" class="hover:text-teal-600"><i class="nf nf-cod-github"></i> Github</a>
-                    </h3>
+        <header class="pt-12 md:pt-20">
+            <div class="flex max-[420px]:flex-col justify-start items-stretch border border-[#a9b4c6] dark:border-zinc-800 border-dashed bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm">
+                <img
+                    class="w-[140px] sm:w-[170px] object-cover border-b max-[420px]:border-b min-[421px]:border-b-0 min-[421px]:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed"
+                    src="/assets/media/images/profile.webp"
+                    alt="Foto de perfil de Leonardo Daniel Castro Morales"
+                    width="170"
+                    height="170"
+                    loading="eager"
+                />
+                <div class="flex-1 p-5 md:p-6 flex flex-col justify-between space-y-3 header-border-fix">
+                    <div class="space-y-1">
+                        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Leonardo Daniel Castro Morales</h1>
+                        <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 font-medium leading-snug">
+                            Ingeniero Backend y de Sistemas &mdash; diseño software explícito y guiado por dominio en Go.
+                        </p>
+                    </div>
+                    <nav class="flex flex-wrap items-center gap-3 pt-2" aria-label="Enlaces sociales">
+                        <a
+                            href="https://www.linkedin.com/in/ldcmleo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Perfil de LinkedIn de Leonardo Castro"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-sm border border-[#a9b4c6] dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:text-teal-700 dark:hover:text-teal-400 hover:border-teal-600 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                        >
+                            <i class="nf nf-dev-linkedin text-sm"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a
+                            href="https://github.com/ldcmleo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Perfil de GitHub de Leonardo Castro"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-sm border border-[#a9b4c6] dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:text-teal-700 dark:hover:text-teal-400 hover:border-teal-600 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                        >
+                            <i class="nf nf-cod-github text-sm"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </nav>
                 </div>
             </div>
         </header>
-        <section class="border-x border-[#a9b4c6] border-dashed">
+
+        <!-- Sobre mi -->
+        <section class="border-x border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="about-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pt-16 px-4 pb-4 border-b border-[#a9b4c6] border-dashed">Sobre mi</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="about-heading" class="text-2xl sm:text-3xl font-bold pt-12 px-5 pb-4 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Sobre mí
+                </h2>
             </div>
-            <div class="space-y-4 p-4">
+            <div class="space-y-4 p-5 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
                 <p>Soy ingeniero backend y de sistemas, enfocado en diseñar software claro, explícito y alineado con reglas reales de negocio. Trabajo principalmente con Go, construyendo servicios donde el dominio guía la arquitectura, y no al revés.</p>
                 <p>Me especializo en modelar problemas complejos como control de acceso, derechos de uso en el tiempo, reglas de pricing, flujos de autenticación y procesos operativos. Suelo priorizar diseños simples y explícitos sobre abstracciones opacas, buscando sistemas que puedan entenderse, mantenerse y evolucionar por los equipos que los operan.</p>
                 <p>Aplico con frecuencia principios de Domain-Driven Design, no como dogma, sino como una herramienta práctica para reducir ambigüedad y reflejar la realidad del negocio de forma más precisa.</p>
                 <p>Gran parte de mi trabajo se desarrolla como software de código abierto. Esto no es solo una decisión técnica, sino una postura consciente: creo que los sistemas deben ser auditables, soberanos y controlables por quienes dependen de ellos. Me interesan especialmente los backends que funcionan de forma confiable en producción sin depender de cajas negras innecesarias.</p>
             </div>
         </section>
-        <section class="border-x border-t border-[#a9d4c6] border-dashed">
+
+        <!-- Experiencia -->
+        <section class="border-x border-t border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="exp-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Experiencia</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="exp-heading" class="text-2xl sm:text-3xl font-bold pb-4 px-5 pt-12 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Experiencia
+                </h2>
             </div>
-            <div class="">
+            <div>
             {
                 ProjectsData.map((obj: any) => (
-                    <Proyecto data={obj} client:load />
+                    <Proyecto data={obj} client:visible />
                 ))
             }
             </div>
         </section>
-        <section class="border-x border-[#a9b4c6] border-dashed">
+
+        <!-- Estudios & Certificados -->
+        <section class="border-x border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="studies-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Estudios</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="studies-heading" class="text-2xl sm:text-3xl font-bold pb-4 px-5 pt-12 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Estudios
+                </h2>
             </div>
-            <div class="md:flex border-b border-[#a9b4c6] border-dashed">
-                <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                    <span class="text-sm">2015 - 2020</span>
+            <div class="md:flex border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-start">
+                    <span class="text-sm font-medium tracking-tight text-zinc-600 dark:text-zinc-400">2025 - Actual</span>
                 </div>
-                <div class="p-4">
-                    <h1>TecNM Campus Reynosa</h1>
-                    <h2 class="text-md ">Ingeniería en Tecnologías de la información y comunicación</h2>
+                <div class="p-4 space-y-1">
+                    <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">Universidad TecMilenio</h3>
+                    <p class="text-sm text-zinc-700 dark:text-zinc-300">Ingeniería en Desarrollo de software</p>
                 </div>
             </div>
-            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Certificados</h2>
+            <h3 class="text-xl font-bold pt-8 pb-4 px-5 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                Certificados
+            </h3>
             <Certificates />
         </section>
-        <section class="border-x border-[#a9b4c6] border-dashed">
+
+        <!-- Más sobre mi -->
+        <section class="border-x border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="more-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Más sobre mi</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="more-heading" class="text-2xl sm:text-3xl font-bold pb-4 px-5 pt-12 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Más sobre mí
+                </h2>
             </div>
-            <div class="border-b border-[#a9b4c6] border-dashed">
-                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
-                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                        <span class="text-lg">Cumpleaños</span>
+            <div class="border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                <div class="md:flex border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                    <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-center">
+                        <span class="text-sm font-semibold tracking-tight text-zinc-700 dark:text-zinc-300">Cumpleaños</span>
                     </div>
-                    <div class="p-4 hover:dark:text-[#080808] hover:dark:bg-[#EEF0F2] hover:text-[#EEF0F2] hover:bg-[#080808] w-full transition-all ease-in-out duration-300">
-                        <h1 class="text-xs">Marzo 5</h1>
+                    <div class="p-4 w-full">
+                        <span class="font-mono text-sm text-zinc-800 dark:text-zinc-200">5 de Marzo</span>
                     </div>
                 </div>
                 <div class="md:flex w-full">
-                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                        <span class="text-lg">Idiomas</span>
+                    <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-center">
+                        <span class="text-sm font-semibold tracking-tight text-zinc-700 dark:text-zinc-300">Idiomas</span>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 w-full">
-                        <h1 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">Español - Nativo</h1>
-                        <h2 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">Inglés - B1</h2>
-                        <h3 class="text-xs p-4">Checo - A1</h3>
+                        <div class="text-sm p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed font-mono">
+                            <span class="text-zinc-900 dark:text-zinc-100 font-bold">Español</span> <span class="text-xs text-zinc-500 dark:text-zinc-400">(Nativo)</span>
+                        </div>
+                        <div class="text-sm p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed font-mono">
+                            <span class="text-zinc-900 dark:text-zinc-100 font-bold">Inglés</span> <span class="text-xs text-zinc-500 dark:text-zinc-400">(B1 Profesional)</span>
+                        </div>
+                        <div class="text-sm p-4 font-mono">
+                            <span class="text-zinc-900 dark:text-zinc-100 font-bold">Checo</span> <span class="text-xs text-zinc-500 dark:text-zinc-400">(A1 Básico)</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Otros proyectos</h2>
-            <div class="border-b border-[#a9b4c6] border-dashed mb-16">
-                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
-                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                        <span class="text-sm ">Diciembre 2020</span>
+            <h3 class="text-xl font-bold pt-8 pb-4 px-5 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                Otros proyectos
+            </h3>
+            <div class="border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed mb-12">
+                <article class="md:flex">
+                    <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-start">
+                        <span class="text-sm font-medium tracking-tight text-zinc-600 dark:text-zinc-400">Diciembre 2020</span>
                     </div>
-                    <div class="p-4">
-                        <div class="w-[65px] h-[120px] bg-center bg-cover bg-no-repeat mb-2" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');"></div>
-                        <h1>Escritura creativa</h1>
-                        <p class="text-sm ">Escribí un cuento corto llamado 'Padre', una historia de reflexión sobre la vida y las relaciones interpersonales. Puedes leerlo en megustaescribir.com</p>
+                    <div class="p-4 space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-4 items-start">
+                            <div class="w-[65px] h-[100px] shrink-0 bg-center bg-cover bg-no-repeat border border-[#a9b4c6] dark:border-zinc-700 shadow-sm" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');" role="img" aria-label="Portada de cuento corto Padre"></div>
+                            <div class="space-y-1">
+                                <h4 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">Escritura creativa &mdash; 'Padre'</h4>
+                                <p class="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                                    Escribí un cuento corto llamado 'Padre', una historia de reflexión sobre la vida y las relaciones interpersonales.
+                                </p>
+                                <a
+                                    href="https://www.megustaescribir.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 text-xs font-mono text-teal-700 dark:text-teal-400 hover:underline pt-1 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                                >
+                                    <span>Leer en megustaescribir.com</span>
+                                    <i class="nf nf-fa-external_link text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>

@@ -1,7 +1,14 @@
 ---
-
+const currentYear = new Date().getFullYear();
 ---
-<footer class="pt-6 pb-8 text-center share">
-    <p>Leonardo Castro @ <a class="hover:text-teal-700 transition-colors ease-in duration-150" href="https://github.com/ldcmleo/ldcmleo.github.io">Official Website</a></p>
-    <a class="text-xs text-gray-500 hover:text-purple-700 transition-colors ease-in duration-150" href="https://astro.build/">Made with <i class="nf nf-custom-astro"></i> Astro Framework</a>
+<footer class="pt-10 pb-16 text-center text-xs text-zinc-500 dark:text-zinc-400 space-y-2">
+    <p>
+        Leonardo Daniel Castro Morales &copy; {currentYear} &mdash; 
+        <a class="hover:text-teal-700 dark:hover:text-teal-400 underline underline-offset-4 transition-colors duration-150" href="https://github.com/ldcmleo/ldcmleo.github.io" target="_blank" rel="noopener noreferrer">
+            Código fuente
+        </a>
+    </p>
+    <p class="text-[11px] text-zinc-400 dark:text-zinc-500">
+        Construido con <a class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors duration-150" href="https://astro.build/" target="_blank" rel="noopener noreferrer">Astro <i class="nf nf-custom-astro"></i></a> y diseñado con rigor artesanal.
+    </p>
 </footer>

@@ -1,13 +1,26 @@
 ---
 import Layout from "@layouts/Layout.astro";
-
-
 ---
-<Layout title="Page not found">
-    <div class="flex justify-center items-center h-screen">
-        <div class="text-center">
-            <h1 class="text-2xl">Page Not Found</h1>
-            <a class="underline" href="/">Go Back</a>
+<Layout title="404 — Página no encontrada | Page not found">
+    <main class="box mx-auto px-4 min-h-[70vh] flex flex-col justify-center items-center py-20">
+        <div class="w-full max-w-md border border-[#a9b4c6] dark:border-zinc-800 border-dashed bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm p-8 text-center relative">
+            <div class="bg-square" aria-hidden="true"></div>
+            <span class="font-mono text-5xl font-bold tracking-tighter text-teal-700 dark:text-teal-400 block mb-3">
+                404
+            </span>
+            <h1 class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-2">
+                Página no encontrada / Page Not Found
+            </h1>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
+                El recurso solicitado no existe o ha sido movido.
+            </p>
+            <a
+                href="/"
+                class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-mono font-medium rounded-sm border border-zinc-700 dark:border-zinc-300 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 hover:opacity-90 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+            >
+                <i class="nf nf-fa-arrow_left"></i>
+                <span>Volver al inicio / Go Home</span>
+            </a>
         </div>
-    </div>
+    </main>
 </Layout>

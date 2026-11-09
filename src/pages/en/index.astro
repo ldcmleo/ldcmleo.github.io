@@ -33,7 +33,7 @@ const ProjectsData = [
         time: "2024 - 2025",
         location: "Reynosa, Tamaulipas, México",
         at: {
-            company: "Profesional Freelancer",
+            company: "Professional Freelancer",
             isLink: false,
             link: ""
         },
@@ -61,7 +61,7 @@ const ProjectsData = [
             isLink: false,
             link: ""
         },
-        description: "I designed and developed responsive user interfaces using HTML, JavaScript and W3.CSS, while optimizing and maintaining the backend endpoints with PHP to improve system performance. Additionally, architect and deployed personalized micros Services with PHP and Docker, and I collaborated in a git version control environment, ensuring a clean and documented code under the best practices of the industry.",
+        description: "I designed and developed responsive user interfaces using HTML, JavaScript and W3.CSS, while optimizing and maintaining the backend endpoints with PHP to improve system performance. Additionally, architected and deployed microservices with PHP and Docker, collaborating in a Git version control workflow with clean and documented code.",
         skills: [
             { name: "Docker", icon: "nf-fa-docker", color: "#2496ED" },
             { name: "Git", icon: "nf-md-git", color: "#F05032" },
@@ -82,7 +82,7 @@ const ProjectsData = [
             isLink: false,
             link: ""
         },
-        description: "I designed an integral website structure that includes key sections such as contact, about us, services and gallery, which guarantees a logical and easy -to -use navigation experience.",
+        description: "I designed a comprehensive website structure that includes key sections such as Contact, About us, Services, and Gallery, ensuring a clean and user-friendly navigation flow.",
         skills: [
             { name: "HTML", icon: "nf-dev-html5", color: "#E34F26" },
             { name: "CSS", icon: "nf-dev-css3", color: "#1572B6" },
@@ -91,7 +91,7 @@ const ProjectsData = [
     },
     {
         id: "project4",
-        role: "Fullstack Developer",
+        role: "Fullstack Programmer",
         time: "2021 - 2021",
         location: "Reynosa, Tamaulipas, México",
         at: {
@@ -99,7 +99,7 @@ const ProjectsData = [
             isLink: false,
             link: ""
         },
-        description: "I designed a standardized website structure that incorporates essential sections such as contact, about us and products. I developed a solid backend to support the website using the Laravel framework, which guarantees efficient data management. I created and optimized an MySQL database structure, implementing migrations through the Laravel ORM to guarantee the integrity and scalability of the data.",
+        description: "I designed a standardized website architecture with essential product and contact management. Developed the backend using Laravel for robust data handling and optimized MySQL schemas with migration support.",
         skills: [
             { name: "HTML", icon: "nf-dev-html5", color: "#E34F26" },
             { name: "CSS", icon: "nf-dev-css3", color: "#1572B6" },
@@ -112,101 +112,171 @@ const ProjectsData = [
 ]
 
 ---
-<Layout title="Leonardo Castro Web oficial, portafolio y CV">
+<Layout title="Leonardo Castro | Backend & Systems Engineer" lang="en">
     <main class="box mx-auto px-4">
         <!-- header -->
-        <header class="pt-16 md:pt-24">
-            <div class="flex max-[320px]:flex-col justify-start min-[321px]:justify-between min-[321]:items-center border border-[#a9b4c6] border-dashed">
-                <img class="max-[467px]:w-[100px] max-w-[180px] border-r border-[#a9b4c6] border-dashed" src="/assets/media/images/profile.webp" alt="foto de perfil de Leonardo Castro">
-                <div class="flex-grow p-4 border-[#a9b4c6] border-dashed header-border-fix">
-                    <h1 class="max-[468px]:text-xs text-lg md:text-xl font-bold">Leonardo Daniel Castro Morales</h1>
-                    <h2 class="max-[468px]:text-xs text-md md:text-lg">Backend & Systems Engineer — designing explicit, domain-driven software in Go.</h2>
-                    <h3 class="max-[468px]:text-xs text-md md:text-lg space-x-2 min-[420px]:pt-2">
-                        <a href="https://www.linkedin.com/in/ldcmleo" class="hover:text-teal-600"><i class="nf nf-dev-linkedin"></i> Linkedin</a>
-                        <a href="https://github.com/ldcmleo" class="hover:text-teal-600"><i class="nf nf-cod-github"></i> Github</a>
-                    </h3>
+        <header class="pt-12 md:pt-20">
+            <div class="flex max-[420px]:flex-col justify-start items-stretch border border-[#a9b4c6] dark:border-zinc-800 border-dashed bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm">
+                <img
+                    class="w-[140px] sm:w-[170px] object-cover border-b max-[420px]:border-b min-[421px]:border-b-0 min-[421px]:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed"
+                    src="/assets/media/images/profile.webp"
+                    alt="Profile picture of Leonardo Daniel Castro Morales"
+                    width="170"
+                    height="170"
+                    loading="eager"
+                />
+                <div class="flex-1 p-5 md:p-6 flex flex-col justify-between space-y-3 header-border-fix">
+                    <div class="space-y-1">
+                        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Leonardo Daniel Castro Morales</h1>
+                        <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 font-medium leading-snug">
+                            Backend & Systems Engineer &mdash; designing explicit, domain-driven software in Go.
+                        </p>
+                    </div>
+                    <nav class="flex flex-wrap items-center gap-3 pt-2" aria-label="Social links">
+                        <a
+                            href="https://www.linkedin.com/in/ldcmleo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Leonardo Castro's LinkedIn Profile"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-sm border border-[#a9b4c6] dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:text-teal-700 dark:hover:text-teal-400 hover:border-teal-600 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                        >
+                            <i class="nf nf-dev-linkedin text-sm"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a
+                            href="https://github.com/ldcmleo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Leonardo Castro's GitHub Profile"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-sm border border-[#a9b4c6] dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:text-teal-700 dark:hover:text-teal-400 hover:border-teal-600 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                        >
+                            <i class="nf nf-cod-github text-sm"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </nav>
                 </div>
             </div>
         </header>
-        <section class="border-x border-[#a9b4c6] border-dashed">
+
+        <!-- About me -->
+        <section class="border-x border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="about-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pt-16 px-4 pb-4 border-b border-[#a9b4c6] border-dashed">About me</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="about-heading" class="text-2xl sm:text-3xl font-bold pt-12 px-5 pb-4 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    About me
+                </h2>
             </div>
-            <div class="space-y-4 p-4">
+            <div class="space-y-4 p-5 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
                 <p>I’m a backend and systems engineer focused on designing software that is clear, explicit, and aligned with real-world business rules. I primarily work with Go, building services where the domain drives the architecture, not the other way around.</p>
                 <p>I specialize in modeling complex problems such as access control, usage rights over time, pricing rules, authentication flows, and operational processes. I tend to favor simple, explicit designs over opaque abstractions, aiming for systems that can be understood, maintained, and evolved by the teams that operate them.</p>
                 <p>I frequently apply principles from Domain-Driven Design, not as a dogma, but as a practical tool to reduce ambiguity and make software reflect reality more accurately.</p>
                 <p>A significant part of my work is developed as open-source software. This is not only a technical choice, but a conscious position: I believe systems should be auditable, sovereign, and controllable by the people who depend on them. I’m particularly interested in backend systems that work reliably in production without relying on unnecessary black boxes.</p>
             </div>
         </section>
-        <section class="border-x border-t border-[#a9d4c6] border-dashed">
+
+        <!-- Experience -->
+        <section class="border-x border-t border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="exp-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Experience</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="exp-heading" class="text-2xl sm:text-3xl font-bold pb-4 px-5 pt-12 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Experience
+                </h2>
             </div>
-            <div class="">
+            <div>
             {
                 ProjectsData.map((obj: any) => (
-                    <Proyecto data={obj} client:load />
+                    <Proyecto data={obj} client:visible />
                 ))
             }
             </div>
         </section>
-        <section class="border-x border-[#a9b4c6] border-dashed">
+
+        <!-- Education & Certificates -->
+        <section class="border-x border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="studies-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">Education</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="studies-heading" class="text-2xl sm:text-3xl font-bold pb-4 px-5 pt-12 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Education
+                </h2>
             </div>
-            <div class="md:flex border-b border-[#a9b4c6] border-dashed">
-                <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                    <span class="text-sm">2015 - 2020</span>
+            <div class="md:flex border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-start">
+                    <span class="text-sm font-medium tracking-tight text-zinc-600 dark:text-zinc-400">2025 - Now</span>
                 </div>
-                <div class="p-4">
-                    <h1>TecNM Campus Reynosa</h1>
-                    <h2 class="text-md ">Engineering in Information and Communication Technologies</h2>
+                <div class="p-4 space-y-1">
+                    <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">Universidad TecMilenio</h3>
+                    <p class="text-sm text-zinc-700 dark:text-zinc-300">Software Engineering</p>
                 </div>
             </div>
-            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Certificates</h2>
+            <h3 class="text-xl font-bold pt-8 pb-4 px-5 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                Certificates
+            </h3>
             <Certificates />
         </section>
-        <section class="border-x border-[#a9b4c6] border-dashed">
+
+        <!-- More about me -->
+        <section class="border-x border-[#a9b4c6] dark:border-zinc-800 border-dashed" aria-labelledby="more-heading">
             <div class="relative">
-                <div class="bg-square"></div>
-                <h1 class="text-4xl pb-4 px-4 pt-16 border-b border-[#a9b4c6] border-dashed">More about me</h1>
+                <div class="bg-square" aria-hidden="true"></div>
+                <h2 id="more-heading" class="text-2xl sm:text-3xl font-bold pb-4 px-5 pt-12 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                    More about me
+                </h2>
             </div>
-            <div class="border-b border-[#a9b4c6] border-dashed">
-                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
-                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                        <span class="text-lg">Birthday</span>
+            <div class="border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                <div class="md:flex border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                    <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-center">
+                        <span class="text-sm font-semibold tracking-tight text-zinc-700 dark:text-zinc-300">Birthday</span>
                     </div>
-                    <div class="p-4 hover:dark:text-[#080808] hover:dark:bg-[#EEF0F2] hover:text-[#EEF0F2] hover:bg-[#080808] w-full transition-all ease-in-out duration-300">
-                        <h1 class="text-xs">March 5</h1>
+                    <div class="p-4 w-full">
+                        <span class="font-mono text-sm text-zinc-800 dark:text-zinc-200">March 5</span>
                     </div>
                 </div>
                 <div class="md:flex w-full">
-                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                        <span class="text-lg">Languages</span>
+                    <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-center">
+                        <span class="text-sm font-semibold tracking-tight text-zinc-700 dark:text-zinc-300">Languages</span>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 w-full">
-                        <h1 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">Spanish - Native</h1>
-                        <h2 class="text-xs p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed">English - B1</h2>
-                        <h3 class="text-xs p-4">Czech - A1</h3>
+                        <div class="text-sm p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed font-mono">
+                            <span class="text-zinc-900 dark:text-zinc-100 font-bold">Spanish</span> <span class="text-xs text-zinc-500 dark:text-zinc-400">(Native)</span>
+                        </div>
+                        <div class="text-sm p-4 border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed font-mono">
+                            <span class="text-zinc-900 dark:text-zinc-100 font-bold">English</span> <span class="text-xs text-zinc-500 dark:text-zinc-400">(B1 Professional)</span>
+                        </div>
+                        <div class="text-sm p-4 font-mono">
+                            <span class="text-zinc-900 dark:text-zinc-100 font-bold">Czech</span> <span class="text-xs text-zinc-500 dark:text-zinc-400">(A1 Basic)</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <h2 class="text-md pt-8 pb-4 pl-4 text-2xl border-b border-[#a9b4c6] border-dashed">Other Projects</h2>
-            <div class="border-b border-[#a9b4c6] border-dashed mb-16">
-                <div class="md:flex border-b border-[#a9b4c6] border-dashed">
-                    <div class="min-w-[160px] border-b md:border-b-0 md:border-r border-[#a9b4c6] border-dashed p-4">
-                        <span class="text-sm ">December 2020</span>
+            <h3 class="text-xl font-bold pt-8 pb-4 px-5 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed tracking-tight text-zinc-900 dark:text-zinc-100">
+                Other Projects
+            </h3>
+            <div class="border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed mb-12">
+                <article class="md:flex">
+                    <div class="min-w-[170px] border-b md:border-b-0 md:border-r border-[#a9b4c6] dark:border-zinc-800 border-dashed p-4 flex items-start">
+                        <span class="text-sm font-medium tracking-tight text-zinc-600 dark:text-zinc-400">December 2020</span>
                     </div>
-                    <div class="p-4">
-                        <div class="w-[65px] h-[120px] bg-center bg-cover bg-no-repeat mb-2" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');"></div>
-                        <h1>Escritura creativa</h1>
-                        <p class="text-sm ">I wrote a short story called 'Father', a story of reflection on life and interpersonal relationships. You can read it in megustaescribir.com</p>
+                    <div class="p-4 space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-4 items-start">
+                            <div class="w-[65px] h-[100px] shrink-0 bg-center bg-cover bg-no-repeat border border-[#a9b4c6] dark:border-zinc-700 shadow-sm" style="background-image: url('https://www.megustaescribir.com/Images/COVER_MANUSCRIPT_106275');" role="img" aria-label="Book cover for short story Father"></div>
+                            <div class="space-y-1">
+                                <h4 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">Creative writing &mdash; 'Father'</h4>
+                                <p class="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                                    I wrote a short story called 'Father', reflecting on life, memory, and interpersonal connections.
+                                </p>
+                                <a
+                                    href="https://www.megustaescribir.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 text-xs font-mono text-teal-700 dark:text-teal-400 hover:underline pt-1 active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                                >
+                                    <span>Read on megustaescribir.com</span>
+                                    <i class="nf nf-fa-external_link text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
