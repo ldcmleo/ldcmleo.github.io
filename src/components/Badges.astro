@@ -1,0 +1,16 @@
+---
+import Badge from "./Badge.astro";
+import { getBadges } from "../data/badges";
+
+interface Props {
+    lang?: "es" | "en";
+}
+
+const { lang = "es" } = Astro.props;
+const badges = await getBadges(lang);
+---
+<section class="divide-y-0" aria-label={lang === "en" ? "Digital Badges" : "Insignias Digitales"}>
+    {badges.map((badge) => (
+        <Badge data={badge} lang={lang} />
+    ))}
+</section>

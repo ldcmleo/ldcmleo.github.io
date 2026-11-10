@@ -1,4 +1,5 @@
 ---
+import Badges from "@components/Badges.astro";
 import Certificates from "@components/Certificates.astro";
 import Proyecto from "@components/main/Proyecto";
 import Layout from "@layouts/Layout.astro";
@@ -212,6 +213,21 @@ const ProjectsData = [
                 Certificados
             </h3>
             <Certificates />
+            <div class="flex items-center justify-between pt-8 pb-4 px-5 border-b border-[#a9b4c6] dark:border-zinc-800 border-dashed">
+                <h3 class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                    Insignias Digitales
+                </h3>
+                <a
+                    href="https://www.credly.com/users/2fd64e70-c3ff-43dd-af1c-7d79b9ea3c5e/badges"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-teal-700 dark:text-teal-400 hover:underline active:scale-95 transition-all duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                >
+                    <span>Perfil Credly</span>
+                    <i class="nf nf-fa-external_link text-[10px]"></i>
+                </a>
+            </div>
+            <Badges lang="es" />
         </section>
 
         <!-- Más sobre mi -->
